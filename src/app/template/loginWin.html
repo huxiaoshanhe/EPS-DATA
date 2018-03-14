@@ -1,0 +1,25 @@
+<div class="window loginWin">
+	<div class="header">
+		<span class="title">登录</span>
+		<span class="ico ico-close" ng-click="acc.loginShow=false;wb.showWindow = false"></span>
+	</div>
+	<div class="body">
+		<form ng-submit="acc.goLogin()">
+			<div class="list-item">
+				<div class="labels">邮箱</div>
+				<input type="text" ng-model="acc.login.loginName" />
+			</div>
+
+			<div class="list-item">
+				<div class="labels">密码</div>
+				<input type="password" ng-model="acc.login.password" />
+			</div>
+			<div class="errorTip" ng-bind="acc.loginError" ng-class="{'success':acc.loginTipsStatus==='success'}"></div>
+			<button>登录</button>
+		</form>
+		<div class="others">
+			<span>没有账户？<a ng-click="acc.loginShow=false;acc.registerShow=true">立即注册</a></span>
+			<a class="f-right" ng-click="acc.loginShow=false;acc.findShow=true">忘记密码</a>
+		</div>
+	</div>
+</div>

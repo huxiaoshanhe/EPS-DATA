@@ -1,0 +1,144 @@
+.chartWrap {
+	position:relative;
+	.imgArea {
+		height:100%;
+		width:100%;
+	}
+	.legendsArea.bottom {
+		position:absolute;
+		bottom:5px;
+		width:100%;
+		height:60px;
+		text-align:center;
+		padding:0 20px;
+		vertical-align:middle;
+	}
+	.legendsArea.right {
+		position:absolute;
+		top:0;
+		right:10px;
+		width:280px;
+		height:100%;
+		padding-top:5%;
+		text-align:left;
+		overflow:auto;
+		.chartLegends {
+			max-height:90%;
+		}
+	}
+	.chartLegends {
+		display:inline-block;
+		max-width:100%;
+		padding:5px 20px;
+		max-height:60px;
+		margin:0 auto;
+		overflow:auto;
+		text-align:left;
+		border:1px solid #222;
+		label {
+			display:inline-block;
+			font-weight:normal;
+			margin-right:10px;
+			font-size:12px;
+			.label {
+				display:inline-block;
+				width:12px;
+				height:12px;
+				position:relative;
+				top:2px;
+				margin-right:3px;
+			}
+		}
+	}
+	.chartLegends.right {
+		position:absolute;
+		
+		label {
+			display:inline-block;
+			font-weight:normal;
+			margin-right:10px;
+			font-size:12px;
+			.label {
+				display:inline-block;
+				width:20px;
+				height:12px;
+				position:relative;
+				top:2px;
+				margin-right:3px;
+			}
+		}
+	}
+	.chart.scatter {
+		padding:0;
+		top:30px;
+		left:10px;		
+	}
+}
+
+.scatter {
+	width:569px;
+	margin-left:-284px;
+	.header {
+		cursor:move;
+		.title {
+			margin-left:8px;
+			.ico {
+				width:18px;
+				height:16px;
+				background-image:url('../assets/images/tool-chart-ico.png');
+				background-position:0 -587px;
+				position:relative;
+				top:3px;
+				margin-right:3px;
+			}
+		}
+	}
+	.body {
+		background:#fff;
+		.indicater-list {
+			width:549px;
+			margin:10px auto;
+			max-height:400px;
+			overflow:auto;
+			table {
+				width:100%;
+				border-collapse:collapse;
+				border:1px solid #ddd;
+				background:#f4f4f4;
+				th,td {
+					border:1px solid #ddd;
+					line-height:37px;
+					height:37px;
+					font-size:12px;
+				}
+				.indicator {
+					div {
+						width:420px;
+						overflow: hidden;
+	    				white-space: nowrap;
+	    				text-overflow: ellipsis;
+					}
+					text-indent:10px;				
+				}
+				.xz,.yz {
+					width:60px;
+					text-align:center;
+					vertical-algin:middle;
+					.checkboxs {
+						display:inline-block;
+						width:10px;
+						height:10px;
+						background:url(../assets/images/icons.png) -22px 0;
+						position:relative;
+						top:14px;
+						cursor:pointer;
+					}
+					.checkboxs.selected {
+						background:url(../assets/images/icons.png) -22px -15px;
+					}
+				}
+			}
+		}
+		
+	}
+}

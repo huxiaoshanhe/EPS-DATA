@@ -1,0 +1,79 @@
+.userDefindedFn {
+	width:569px;
+	margin-left:-284px;
+	.header {
+		cursor:move;
+		.title {
+			margin-left:8px;
+			.ico {
+				width:20px;
+				height:16px;
+				background-image:url('../assets/images/tool-chart-ico.png');
+				background-position:0 -282px;
+				position:relative;
+				top:3px;
+				margin-right:3px;
+			}
+		}
+	}
+	.body {
+		background:#fff;
+		.bolder {
+			font-weight:bold;
+			line-height:30px;
+			margin:10px 10px 0 10px;;
+		}
+		.sortOrder {
+			height:22px;
+			font-size:12px;
+			width:549px;
+			margin:0 10px;
+			border:1px solid #aaa;
+			position:relative;
+			cursor:pointer;
+			.selectedConditon {
+				text-indent:5px;
+				line-height:20px;
+			}
+			.ico-dropdown {
+				width:12px;
+				height:6px;
+				background-position:0 -378px;
+				position:absolute;
+				right:6px;
+				top:5px;
+			}
+			.list {
+				display:none;
+				width:549px;
+				position:absolute;
+				top:20px;
+				z-index:100;
+				left:-1px;
+				background:#fff;
+				border:1px solid #aaa;
+				padding:0;
+				li{
+					text-indent:5px;
+					line-height:20px;
+				}
+				li:hover {
+					background:#ddd;
+				}
+			}
+		}
+		.fnInput {
+			margin:0 10px;
+			input {
+				width:100%;
+				border:1px solid #aaa;
+				height:22px;
+				line-height:22px;
+				text-indent:5px;
+			}
+			input:focus {
+				outline:none;
+			}
+		}
+	}
+}

@@ -1,0 +1,72 @@
+.cubesInner {
+	*{margin:0;padding:0;}
+	font-size:12px;
+	padding-top: 10px;
+	font-family:"Tahoma, Arial, Helvetica, sans-serif";
+	>ul {
+		>li.lastLevel {
+			padding-left:28px;
+		}
+		li {
+			span {
+				display:block;
+				padding:5px 0;
+				color:#007dbc;
+				cursor:pointer;
+				position:relative;
+				i.ico {
+					position:absolute;
+					left:12px;
+					top:8px;
+					width:10px;
+					height:10px;
+				}
+			}
+			>ul {
+				display:none;
+				li {
+					>span {
+						padding-left:46px;
+					}
+					>ul {
+						padding-left:28px;
+						display:none;
+						li {
+							span {
+								padding-left:16px;
+							}
+							ul {
+								padding-left:10px;
+							}
+						}
+						li.hasChild>span {
+							padding-left:16px;
+							.ico {
+								left:0;
+							}
+						}
+					}
+				}
+			}
+		}
+		li.closed>span i.ico {
+			background-position:0 -64px;
+		}
+		li.opened>span i.ico {
+			background-position:0 -48px;
+		}
+		li.hasChild {
+			>span{
+				display:block;
+				padding-left: 28px;
+			}
+		}
+		
+		li.currentCube {
+			background:#0d8ccc;
+			span {
+				color:#fff;
+			}			
+		}
+	}
+}

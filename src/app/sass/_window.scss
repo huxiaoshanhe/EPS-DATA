@@ -1,0 +1,71 @@
+.windowWrap {
+	width:100%;
+	height:100%;
+	position:absolute;
+	top:0;
+	left:0;
+	z-index:999;
+}
+.window {
+	position:absolute;
+	top:100px;
+	left:50%;
+	z-index:1000;
+	.header {
+		background:#144f7b;
+		height:35px;
+		line-height:35px;
+		font-size:14px;
+		color:#fff;		
+		.ico-close {
+			float:right;
+			width:14px;
+			height:14px;
+			background-position:0 -26px;
+			margin:10px;
+			cursor:pointer;
+		}
+	}
+	.body {
+		border:1px solid #666762;
+		font-size:12px;
+	}
+	.buttons {
+		margin:50px 0 30px 0;
+		height:38px;
+		text-align:center;
+		.btn {
+			display:inline-block;
+			width:68px;
+			height:32px;
+			line-height:32px;
+			color:#fff;
+			padding:0;
+			border-radius:2px;
+			margin:0 10px;
+			font-size:12px;
+		}
+		.apply {
+			background:#0c8ccb;
+		}
+		.apply:hover {
+			background:#154F77;
+		}
+		.del {
+			background:#282828;
+		}
+		.del:hover {
+			background:#111111;
+		}
+		.cancel {
+			background:#666666;
+		}
+		.cancel:hover {
+			background:#383838;
+		}
+	}
+	.ico{
+		display:inline-block;
+		background-image:url(../assets/images/window-icons.png);
+	}
+}

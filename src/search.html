@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="pf">
+<head>
+  	<meta charset="UTF-8">
+  	<meta name="renderer" content="webkit|ie-comp|ie-stand">
+  	<meta name="renderer" content="webkit">
+  	<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  	<meta name="description" content="">
+  	<meta name="viewport" content="width=device-width">
+  	<meta http-equiv="Content-Type" content="textml; charset=UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=8">
+	<meta http-equiv="Expires" content="0">
+	<meta http-equiv="Pragma" content="no-cache">
+	<meta http-equiv="Cache-control" content="no-cache">
+	<meta http-equiv="Cache" content="no-cache">
+	<title>跨库搜索</title>
+	<link rel="stylesheet" href="search/css/bootstrap.css">
+ 	<link rel="stylesheet" href="search/css/search.css">
+</head>
+<body ng-controller="searchCtrl as sc">
+	<div id="plat-main"  loading="loading">
+		<div id="top" ng-style="sc.mainStyle.topStyle">
+			<div class="top-head" ng-style="sc.mainStyle.topHeadStyle">
+				<div class="logo">
+					<a href="/"><img src="search/images/logo.png" /></a>
+				</div>
+				<div class="search">
+					<form action method="get">
+						<input type="text" class="txt" name="keywords" ng-model="keywords" />
+						<input type="submit"class="btn" value="搜索" />
+					</form>
+				</div>
+			</div>
+			<div class="top-message">
+				<div class="welcome">
+					你好，<span ng-bind="userName"></span>，欢迎使用EPS数据平台！
+				</div>
+				<div class="notice">
+					<div class="notice-label"><i class="ico ico-notice"></i>活动通知：</div>
+					<div class="notice-title"><marquee behavior="scroll" onmouseover="this.stop();" onmouseout="this.start();"><a ng-href="{{activeUrl}}" target="_blank">{{news}}</a></marquee></div>
+				</div>
+				<div class="other-nav">
+					<span ng-show="userNickname"><a href="collections.html" target="_blank">{{userNickname}}</a>|</span>
+					<span ng-show="wb.topCutFlag"><a ng-click="wb.topCut(!wb.topCutFlag)"><i class="ico ico-sear"></i>搜索</a>|</span><a ng-click="wb.showHelp()"><i class="ico ico-help"></i>帮助中心</a>|<a href="javascript:;" ng-click="wb.logout()"><i class="ico ico-home"></i>返回首页</a>|<a href="http://oldolap.epsnet.com.cn/default.aspx" target="_blank">旧版入口</a>
+				</div>
+				<div class="topCut" ng-click="sc.topCut(!sc.topCutFlag)"><span class="inner" ng-style="sc.mainStyle.topCutStyle"></span></div>
+			</div>
+		</div>
+		<div id="cubes" ng-style="sc.mainStyle.cubesStyle">
+			<div class="cubesInnerWrap">
+				<div class="ico ico-cube-switch" ng-click="sc.switchs('cube')" ng-style="sc.mainStyle.switchStyle"></div>
+				<div class="cubeList" ng-show="sc.showCubes">数据库</div>
+				<cubes class="cubesInner" data="cubes" ng-show="sc.showCubes">	
+				</cubes>
+			</div>
+		</div>
+		<div id="dimension" ng-style="sc.mainStyle.dimensionsStyle">
+			<div class="ico ico-dimen-switch" ng-click="sc.switchs('dimen')" ng-style="sc.mainStyle.switchStyle"></div>
+			<dimension data="dimens" ng-show="sc.showDimensions"></dimension>			
+		</div>
+		<div id="platform" ng-style="sc.mainStyle.platformStyle">
+			<div class="result">
+				<div class="result-title">
+					<span>搜索结果</span>
+					<a href="platform.html?sid={{sid}}" target="_blank">显示数据</a>
+				</div>
+				<div class="statement" ng-style="sc.statementStyle">
+					<i class="ico ico-statement"></i>注意请选择同一个数据库的条目来显示数据
+				</div>
+				<div class="sear-list">
+					<div ng-show="noData=='无数据'" style="color:#ff0000;text-indent: 20px;line-height: 30px;" ng-bind="noData"></div>
+					<ul ng-show="noData!='无数据'">
+						<li ng-repeat="result in searchIndicators" id="cubeId_{{result.cube.cubeId}}">
+							<span class="opened" ng-click="sc.toggle(result.cube.cubeId)"></span>
+							<label ng-class="{'disabled':sc.isDisabled(result.cube.cubeId)}" ng-click="sc.checkedIndicator(result.cube.cubeId)">
+								<span class="labels" ng-class="{'selected':sc.selectedIndicators.cubeId==result.cube.cubeId}"></span>
+								<span ng-bind="result.cube.cubeNameZh"></span>
+							</label>
+							<ul>
+								<li ng-repeat="re in result.indicatorList">
+									<label ng-class="{'disabled':sc.isDisabled(result.cube.cubeId)}" ng-click="sc.checkedIndicator(result.cube.cubeId,re.indicatorCode)">
+										<span class="labels" ng-class="{'selected':(sc.selectedIndicators.indicatorCodes.indexOf(re.indicatorCode)!==-1)&&(sc.selectedIndicators.cubeId==result.cube.cubeId)}"></span>
+										<span ng-bind="re.nameZh"></span>
+									</label>
+									<span class="ico info" ng-click="sc.showInfo(re,$event)"></span>
+								</li>
+							</ul>
+						</li>
+					</ul>
+					<infomation class="infomation" data="sc.infomation"></infomation>
+				</div>
+			</div>	
+			<div class="page" ng-controller="pageCtrl as pc">
+				<span>共{{page.totalNum}}个库 | 每页{{page.pageSize}}个库 | 共{{page.totalPage}}页</span>
+				<a ng-click="pc.prev()">上一页</a>
+				<span>第{{page.currentPage}}页</span>
+				<a ng-click="pc.next()">下一页</a>
+				<input type="text" class="txt" ng-model="pc.page" />
+				<a class="button" ng-click="pc.go()">go</a>
+			</div>		
+		</div>
+	</div>
+	<help-center class="helpCenter" ng-show="sc.showHelpCenter"></help-center>
+	<div class="loading" ng-show="loadingShow">
+		<div class="loading-inner"></div>
+		<div class="loading-img"><img src="search/images/timg.gif" /></div>
+	</div>
+	<script src="search/js/jquery-1.11.3.min.js"></script>
+	<script src="search/js/jquery-ui.min.js"></script>
+	<script src="search/js/jquery.cookie.js"></script>
+	<script src="search/js/angular.js"></script>
+	<script src="search/js/search.js"></script>
+	<script src="search/js/configs.js"></script>
+	<script src="search/js/data.service.js"></script>
+</body>
+</html>

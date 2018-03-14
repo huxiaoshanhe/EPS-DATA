@@ -1,0 +1,348 @@
+.save {
+	width:475px;
+	margin-left:-237px;
+	height:254px;
+	background:#f7f7f7;
+	.header {
+		cursor:move;
+		.title {
+			margin-left:9px;
+			.ico {
+				width:15px;
+				height:16px;
+				background-image:url(../assets/images/tool-chart-ico.png);
+				background-position:0 -17px;
+				position:relative;
+				top:3px;
+				margin-right:2px;
+			}
+		}
+	}
+	.body {
+		height:219px;
+		width:475px;
+		padding-top:20px;
+		.list-item {
+			width:447px;
+			margin:15px auto;
+			height:32px;
+			line-height:32px;
+			.labels {
+				width:40px;
+				float:left;
+			}
+			.inputs {
+				width:407px;
+				height:32px;
+				float:right;
+				position:relative;
+				border:1px solid #aaa;
+				.ico {
+					position:absolute;
+					top:8px;
+					left:5px;
+					width:15px;
+					height:12px;
+					background: url(../assets/images/window-icons.png) 0 -106px;
+					z-index:10;
+				}
+				input {
+					width:405px;
+					border:none;
+					height:30px;
+					line-height:30px;
+					text-indent:22px;
+					position:absolute;
+					top:0;
+					left:0;
+				}
+				input:focus {
+					outline:none;
+				}
+				.dropDown {
+					display:block;
+					width:36px;
+					height:30px;
+					border-left:1px solid #aaa;
+					position:absolute;
+					right:0;
+					top:0;
+					background:#eee;
+					cursor:pointer;
+					i {
+						display:inline-block;
+						width:12px;
+						height:6px;
+						background:url(../assets/images/window-icons.png) 0 -378px;
+						position:relative;
+						left:13px;
+						top:-2px;
+					}
+				}
+				.folder-list {
+					padding:0;
+					position:absolute;
+					width:100%;
+					top:30px;
+					background:#fff;
+					max-height:200px;
+					overflow:auto;
+					border:1px solid #aaa;
+					left:0px;
+					ul {
+						-webkit-padding-start: 0;
+						-moz-padding-start:0;
+						padding-start:0;
+						padding-left:0;
+					}
+					li {
+						line-height: 26px;
+						cursor: pointer;
+						position: relative;
+					}
+					li ul {
+						display: none;
+					}
+					>ul>li>ul{
+						display:block;
+					}
+					.switch {
+						position:absolute;
+						display: inline-block;
+						width:10px;
+						height:10px;
+						background:#aaa;
+						margin-right:3px;
+						background-image: url('/assets/images/icons.png');
+						top:8px;
+						z-index: 10;
+					}
+					.switch.closed {
+						background-position: 0 -64px;
+					}
+					.switch.opened {
+						background-position: 0 -48px;
+					}
+					.switch.none {
+						background: none;
+					}
+					.folder {
+						display: inline-block;
+						width:15px;
+						height:12px;
+						background:url('/assets/images/window-icons.png') 0 -106px;
+						margin-right:3px;
+					}
+					a {
+						width:100%;
+						display: block;
+					}
+					a.on {
+						background: #d1f1fe;
+					}
+				}
+			}
+		}
+		.tips {
+			height:30px;
+			line-height:30px;
+			color:#0D8CCC;
+			text-indent:20px;
+		}
+		.buttons {
+			margin-top:10px;
+			.btn {
+				float:left;
+			}
+			.newFile {
+				background:#fff;
+				border:1px solid #0a8bcd;
+				color:#333333;
+				width:100px;
+				margin-left:15px;
+				i {
+					display:inline-block;
+					width:15px;
+					height:12px;
+					background:url(../assets/images/window-icons.png) 0 -93px;
+					margin-right:3px;
+				}
+			}
+			.apply {
+				margin-left:180px;
+			}
+		}
+	}
+}
+
+.newFolderWin{
+	position:absolute;
+	width:300px;
+	margin-left:-150px;
+	height:194px;
+	background:#f7f7f7;
+	top:146px;
+	.header {
+		cursor:move;
+		.title {
+			margin-left:9px;
+			.ico {
+				width:15px;
+				height:12px;
+				background-image:url(../assets/images/window-icons.png);
+				background-position:0 -93px;
+				position:relative;
+				top:1px;
+				margin-right:2px;
+			}
+		}
+	}
+	.body {
+		height:159px;
+		width:300px;
+		padding-top:10px;
+		.list-item {
+			width:272px;
+			margin:10px auto;
+			height:32px;
+			line-height:32px;
+			.labels {
+				width:40px;
+				float:left;
+			}
+			.inputs {
+				width:232px;
+				height:32px;
+				float:right;
+				position:relative;
+				border:1px solid #aaa;
+				.ico {
+					position:absolute;
+					top:8px;
+					left:5px;
+					width:15px;
+					height:12px;
+					background: url(../assets/images/window-icons.png) 0 -106px;
+					z-index:10;
+				}
+				input {
+					width:230px;
+					border:none;
+					height:30px;
+					line-height:30px;
+					text-indent:22px;
+					position:absolute;
+					top:0;
+					left:0;
+				}
+				input:focus {
+					outline:none;
+				}
+				.dropDown {
+					display:block;
+					width:36px;
+					height:30px;
+					border-left:1px solid #aaa;
+					position:absolute;
+					right:0;
+					top:0;
+					background:#eee;
+					cursor:pointer;
+					i {
+						display:inline-block;
+						width:12px;
+						height:6px;
+						background:url(../assets/images/window-icons.png) 0 -378px;
+						position:relative;
+						left:13px;
+						top:-2px;
+					}
+				}
+				.folder-list {
+					padding:0;
+					position:absolute;
+					width:232px;
+					top:30px;
+					background:#fff;
+					max-height:200px;
+					overflow:auto;
+					border:1px solid #aaa;
+					left:-1px;
+					ul {
+						-webkit-padding-start: 0;
+						-moz-padding-start:0;
+						padding-start:0;
+						padding-left:0;
+					}
+					li {
+						line-height: 26px;
+						cursor: pointer;
+						position: relative;
+					}
+					li ul {
+						display: none;
+					}
+					>ul>li>ul{
+						display:block;
+					}
+					
+					.switch {
+						position:absolute;
+						display: inline-block;
+						width:10px;
+						height:10px;
+						background:#aaa;
+						margin-right:3px;
+						background-image: url('/assets/images/icons.png');
+						top:8px;
+						z-index: 10;
+					}
+					.switch.closed {
+						background-position: 0 -64px;
+					}
+					.switch.opened {
+						background-position: 0 -48px;
+					}
+					.switch.none {
+						background: none;
+					}
+					.folder {
+						display: inline-block;
+						width:15px;
+						height:12px;
+						background:url('/assets/images/window-icons.png') 0 -106px;
+						margin-right:3px;
+					}
+					a {
+						width:100%;
+						display: block;
+					}
+					a:hover {
+						background: #d1f1fe;
+					}
+					a.on {
+						background: #d1f1fe;
+					}
+				}
+			}
+		}
+
+		.buttons {
+			margin:20px 0 0 0;
+			.newFile {
+				background:#fff;
+				border:1px solid #0a8bcd;
+				color:#333333;
+				width:100px;
+				margin-left:15px;
+				i {
+					display:inline-block;
+					width:15px;
+					height:12px;
+					background:url(../assets/images/window-icons.png) 0 -93px;
+					margin-right:3px;
+				}
+			}
+		}
+	}
+}

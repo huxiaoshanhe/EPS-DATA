@@ -1,0 +1,12 @@
+<div ng-show="wb.errorShow">
+	<div class="header">
+		<span class="title">错误提示</span>
+		<span class="ico ico-close" ng-click="wb.closeError(wb.errorMessage)"></span>
+	</div>
+	<div class="body">
+		<div class="errorCon">{{wb.errorMessage}}</div>		
+		<div class="buttons">
+			<span class="btn apply" ng-click="wb.closeError(wb.errorMessage)">确定</span>
+		</div>
+	</div>
+</div>

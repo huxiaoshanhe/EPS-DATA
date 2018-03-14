@@ -1,0 +1,713 @@
+.userDefindedChart{
+	width:569px;
+	margin-left:-284px;
+	.header {
+		cursor:move;
+		.title {
+			margin-left:8px;
+			.ico {
+				width:15px;
+				height:15px;
+				background-image:url('../assets/images/tool-chart-ico.png');
+				background-position:0 -653px;
+				position:relative;
+				top:3px;
+				margin-right:3px;
+			}
+		}
+	}
+	.body {
+		background:#fff;
+		font-size:14px;
+		*{color:#282828;}
+		.bolder {
+			padding:0;
+			line-height:30px;
+			font-weight:bold;
+		}		
+		.bolder.normal {
+			font-weight:normal;
+		}
+		.dropdown {
+			width:12px;
+			height:6px;
+			background-position:0 -378px;
+			position:absolute;
+			right:5px;
+			top:8px;
+		}
+		.chartName {
+			width:268px;
+			float:left;
+			margin-left:10px;
+			.txt {
+				width:268px;
+				height:24px;
+				border:1px solid #aaa;
+			}
+			.txt:focus {outline:none;}
+		}
+		.chartType {
+			width:268px;
+			float:right;
+			margin-right:10px;
+			.selectType {
+				width:266px;
+				height:24px;
+				border:1px solid #aaa;
+				position:relative;
+				cursor:pointer;
+				line-height:24px;
+				.selectedType {
+					text-indent:5px;
+				}
+				.typeList {
+					display:none;
+					position:absolute;
+					top:22px;
+					left:-1px;
+					border:1px solid #aaa;
+					width:266px;
+					background:#fff;
+					z-index:102;
+					padding:0;
+					li {
+						text-indent:5px;
+					}
+					li:hover {
+						background:#ddd;
+					}
+				}
+			}
+		}
+		.sortOrder {
+			margin:10px;
+			.selectOrder {
+				width:545px;
+				border:1px solid #aaa;
+				height:24px;
+				position:relative;
+				cursor:pointer;
+				.selectedOrder {
+					text-indent:5px;
+				}
+				.orderList {
+					width:545px;
+					border:1px solid #aaa;
+					padding:0;
+					position:absolute;
+					top:22px;
+					left:-1px;
+					z-index:100;
+					background:#fff;
+					li {
+						text-indent:5px;
+					}
+					li:hover{
+						background:#ddd;
+					}
+				}
+			}
+		}
+		.cover {
+			width:100%;
+			height:124px;
+			background:#fff;
+			position:absolute;
+			top:130px;
+			left:0;
+			z-index:101;
+			filter:alpha(opacity=30); 
+			-moz-opacity:0.3; 
+			opacity:0.3;
+		}
+		.coverx {
+			width:100%;
+			height:44px;
+			background:#fff;
+			position:absolute;
+			top:166px;
+			left:0;
+			z-index:100;
+			filter:alpha(opacity=30); 
+			-moz-opacity:0.3; 
+			opacity:0.3;
+		}
+		.otherSet {
+			width:545px;
+			background:#f5f5f5;
+			margin:10px;
+			border:1px solid #aaa;
+			.orderType {
+				border-bottom:1px solid #aaa;
+				height:44px;
+				.bolder {
+					width:80px;
+					height:44px;
+					line-height:44px;
+					float:left;
+					text-align:center;
+				}
+				.selectType2 {
+					width:198px;
+					border:1px solid #aaa;
+					height:24px;
+					float:left;
+					background:#fff;
+					margin:10px 0 0 0;
+					position:relative;
+					cursor:pointer;
+					line-height:24px;
+					.selectedType{
+						text-indent:5px;
+					}
+					.dropdown {
+						width:12px;
+						height:6px;
+						background-position:0 -378px;
+						position:absolute;
+						right:5px;
+						top:8px;
+					}
+					.typeList2 {
+						display:none;
+						position:absolute;
+						top:22px;
+						left:-1px;
+						border:1px solid #aaa;
+						width:266px;
+						background:#fff;
+						z-index:100;
+						padding:0;
+						li {
+							text-indent:5px;
+						}
+						li:hover {
+							background:#ddd;
+						}
+					}
+				}
+				label {
+					display:block;
+					width:200px;
+					float:left;
+					line-height:44px;
+					margin-left:10px;
+					cursor:pointer;
+					font-weight:normal;
+					.checkboxs {
+						display:inline-block;
+						width:10px;
+						height:10px;
+						background:url(../assets/images/icons.png) -22px 0;
+						position:relative;
+						top:16px;
+						margin-right:3px;
+					}
+					.checkboxs.selected {
+						background:url(../assets/images/icons.png) -22px -15px;
+					}
+				}
+			}
+
+			.lineAttr {
+				height:44px;
+				.lineColor {
+					margin:0;
+					width:200px;
+					float:left;
+					.bolder {
+						display:block;
+						width:80px;
+						float:left;
+						line-height:34px;
+						text-align:center;
+					}
+					.colorSelect {
+						width:60px;
+						height:24px;
+						border:1px solid #aaa;
+						float:left;
+						margin:5px 0 0 0;
+						position:relative;
+						cursor:pointer;
+						.selectedColor {
+							width:18px;
+							height:18px;
+							position:absolute;
+							top:2px;
+							left:2px;
+						}
+						.dropdown {
+							width:12px;
+							height:6px;
+							position:absolute;
+							top:7px;
+							right:5px;
+							background-position:0 -378px;
+						}
+						.colors {
+							display:none;
+							position:absolute;
+							top:22px;
+							left:-1px;
+							width:183px;
+							height:105px;
+							z-index:100;
+							border:1px solid #aaa;
+							background:#fff;
+							span {
+								display:inline-block;
+								width:12px;
+								height:12px;
+								margin:0 3px;
+								cursor:pointer;
+							}
+							.common-colors {
+								padding:5px 0;
+								height:20px;
+								span {
+									border:1px solid #ddd;
+								}
+							}
+							.color-list {
+								.unit {
+									width:12px;
+									height:60px;
+									float:left;
+									margin:0 3px;
+									padding:0;
+									margin-top:3px;
+									span {
+										display:block;
+										padding:0;
+										margin:0;
+									}
+								}
+								
+							}
+							.other-color {
+								height:20px;
+								span {
+									border:1px solid #ddd;
+								}
+							}
+						}
+					}				
+				}	
+				.lineWeight {
+					width:200px;
+					float:left;					
+					.bolder {
+						display:block;
+						width:80px;
+						float:left;
+						line-height:34px;
+						text-align:center;
+					}
+					input {
+						width:60px;
+						border:1px solid #aaa;
+						height:24px;
+						float:left;
+						margin:5px 0 0 0;
+					}
+					input:focus {outline:none;}
+				}	
+				.lineFilter {
+					width:120px;
+					float:left;
+					.bolder {
+						display:block;
+						width:60px;
+						float:left;
+						line-height:34px;
+						text-align:center;
+					}
+					input {
+						width:60px;
+						border:1px solid #aaa;
+						height:24px;
+						float:left;
+						margin:5px 0 0 0;
+					}
+					input:focus {outline:none;}
+				}		
+			}
+			.fillIn {
+				height:44px;
+				.lustre {
+					width:200px;
+					height:34px;
+					float:left;
+					margin:5px 0 0 0;
+					.bolder {
+						float:left;
+						line-height:34px;
+						width:80px;
+						text-align:center;
+					}
+					.selectLustre {
+						width:60px;
+						height:24px;
+						float:left;
+						margin-top:5px;
+						border:1px solid #aaa;
+						position:relative;
+						.dropdown {
+							width:12px;
+							height:6px;
+							background-position:0 -378px;
+							position:absolute;
+							right:5px;
+							top:8px;
+						}
+					}
+				}
+				.baseColor {
+					margin:0;
+					width:200px;
+					float:left;
+					margin-top:5px;
+					.bolder {
+						display:block;
+						width:60px;
+						float:left;
+						line-height:34px;
+					}
+					.bscolorSelect {
+						width:60px;
+						height:24px;
+						border:1px solid #aaa;
+						float:left;
+						margin:5px 0 0 0;
+						position:relative;
+						cursor:pointer;
+						.selectedColor {
+							width:18px;
+							height:18px;
+							position:absolute;
+							top:2px;
+							left:2px;
+						}
+						.dropdown {
+							width:12px;
+							height:6px;
+							position:absolute;
+							top:7px;
+							right:5px;
+							background-position:0 -378px;
+						}
+						.colors {
+							display:none;
+							position:absolute;
+							top:22px;
+							left:-1px;
+							width:183px;
+							height:105px;
+							z-index:100;
+							border:1px solid #aaa;
+							background:#fff;
+							span {
+								display:inline-block;
+								width:12px;
+								height:12px;
+								margin:0 3px;
+								cursor:pointer;
+							}
+							.common-colors {
+								padding:5px 0;
+								height:20px;
+								span {
+									border:1px solid #ddd;
+								}
+							}
+							.color-list {
+								.unit {
+									width:12px;
+									height:60px;
+									float:left;
+									margin:0 3px;
+									padding:0;
+									margin-top:3px;
+									span {
+										display:block;
+										padding:0;
+										margin:0;
+									}
+								}
+								
+							}
+							.other-color {
+								height:20px;
+								span {
+									border:1px solid #ddd;
+								}
+							}
+						}
+					}				
+				}	
+				.fillFilter {
+					width:120px;
+					float:left;
+					margin-top:5px;
+					.bolder {
+						display:block;
+						width:60px;
+						float:left;
+						line-height:34px;
+						text-align:center;
+					}
+					input {
+						width:60px;
+						border:1px solid #aaa;
+						height:24px;
+						float:left;
+						margin:5px 0 0 0;
+					}
+					input:focus {outline:none;}
+				}
+			}
+		}
+		.view {
+			width:250px;
+			float:left;
+			margin-left:10px;
+			.bgColor {
+				.bolder {
+					width:70px;
+					float:left;
+					line-height:34px;
+				}
+				.colorSelect {
+					width:60px;
+					height:24px;
+					border:1px solid #aaa;
+					float:left;
+					margin:5px 0 0 0;
+					position:relative;
+					cursor:pointer;
+					.selectedColor {
+						width:18px;
+						height:18px;
+						position:absolute;
+						top:2px;
+						left:2px;
+					}
+					.dropdown {
+						width:12px;
+						height:6px;
+						position:absolute;
+						top:7px;
+						right:5px;
+						background-position:0 -378px;
+					}
+					.colors {
+						display:none;
+						position:absolute;
+						top:22px;
+						left:-1px;
+						width:183px;
+						height:105px;
+						z-index:100;
+						border:1px solid #aaa;
+						background:#fff;
+						span {
+							display:inline-block;
+							width:12px;
+							height:12px;
+							margin:0 3px;
+							cursor:pointer;
+						}
+						.common-colors {
+							padding:5px 0;
+							height:20px;
+							span {
+								border:1px solid #ddd;
+							}
+						}
+						.color-list {
+							.unit {
+								width:12px;
+								height:60px;
+								float:left;
+								margin:0 3px;
+								padding:0;
+								margin-top:3px;
+								span {
+									display:block;
+									padding:0;
+									margin:0;
+								}
+							}
+							
+						}
+						.other-color {
+							height:20px;
+							span {
+								border:1px solid #ddd;
+							}
+						}
+					}
+				}
+			}
+			label {
+				cursor:pointer;
+				height:34px;
+				line-height:34px;
+				margin-left:10px;
+				font-weight:normal;
+				.checkboxs {
+					display:inline-block;
+					width:10px;
+					height:10px;
+					background:url(../assets/images/icons.png) -22px 0;
+					position:relative;
+					top:12px;
+					margin-right:3px;
+				}
+				.checkboxs.selected {
+					background:url(../assets/images/icons.png) -22px -15px;
+				}
+			}
+		}
+
+		.dataLable {
+			width:295px;
+			float:right;
+			margin-right:10px;
+			label {
+				cursor:pointer;
+				height:34px;
+				line-height:34px;
+				float:left;
+				font-weight:normal;
+				.checkboxs {
+					display:inline-block;
+					width:10px;
+					height:10px;
+					background:url(../assets/images/icons.png) -22px 0;
+					position:relative;
+					top:12px;
+					margin-right:3px;
+				}
+				.checkboxs.selected {
+					background:url(../assets/images/icons.png) -22px -15px;
+				}
+			}
+			.selectFont {
+				width:60px;
+				height:24px;
+				border:1px solid #aaa;
+				float:left;
+				margin-top:5px;
+				margin-left:10px;
+				cursor:pointer;
+				position:relative;
+				.dropdown {
+					width:12px;
+					height:6px;
+					position:absolute;
+					top:7px;
+					right:5px;
+					background-position:0 -378px;
+				}
+			}
+			.fontSize {
+				width:102px;
+				float:left;
+				margin-left:20px;
+				.bolder {
+					float:left;
+					line-height:34px;
+				}
+				input {
+					width:60px;
+					height:24px;
+					float:right;
+					border:1px solid #aaa;
+					margin-top:5px;
+					text-indent:5px;
+				}
+				input:focus {
+					outline:none;
+				}
+			}
+		}
+		.lengend {
+			width:547px;
+			margin:0 auto;
+			position:relative;
+			label {
+				cursor:pointer;
+				height:34px;
+				line-height:34px;
+				font-weight:normal;
+				float:left;
+				.checkboxs {
+					display:inline-block;
+					width:10px;
+					height:10px;
+					background:url(../assets/images/icons.png) -22px 0;
+					position:relative;
+					top:12px;
+					margin-right:3px;
+				}
+				.checkboxs.selected {
+					background:url(../assets/images/icons.png) -22px -15px;
+				}
+			}
+		}
+		.selectPosition {
+			width:80px;
+			border:1px solid #aaa;
+			height:24px;
+			float:left;
+			margin:5px 10px;
+			position:relative;
+			cursor:pointer;
+			.dropdown {
+				width:12px;
+				height:6px;
+				position:absolute;
+				top:7px;
+				right:5px;
+				background-position:0 -378px;
+			}
+			input {
+				width:78px;
+				height:22px;
+				border:none;
+				text-indent:5px;
+			}
+			input:focus {
+				outline:none;
+			}
+			.positionList {
+				display:block;
+				background:#fff;
+				border:1px solid #aaa;
+				width:80px;
+				padding:0;
+				position:absolute;
+				left:-1px;
+				li {
+					text-indent:5px;
+					cursor:pointer;
+					line-height:22px;
+				}
+				li:hover {
+					background:#ddd;
+				}
+			}
+		}
+
+		.cover2 {
+			width:80px;
+			height:24px;
+			position:absolute;
+			top:35px;
+			left:82px;
+		}
+	}
+}

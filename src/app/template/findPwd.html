@@ -1,0 +1,32 @@
+<div class="window findPwd">
+	<div class="header">
+		<span class="title">找回密码</span>
+		<span class="ico ico-close" ng-click="acc.findShow=false;wb.showWindow = false"></span>
+	</div>
+	<div class="body">
+		<form ng-submit="acc.goFind()">			
+			<div class="list-item">
+				<div class="labels">验证邮箱</div>
+				<input type="text" ng-model="acc.find.loginName" />
+			</div>
+			<div class="list-item">
+				<div class="labels">验<span class="split">证</span>码</div>
+				<input type="text" ng-model="acc.find.code" class="short" />
+				<a type="button" class="button" ng-disabled="acc.findSendDisabled" ng-class="{'disabled':acc.findSendDisabled}" ng-click="acc.sendFindCode()">{{acc.findSend}}</a>
+			</div>
+			<div class="list-item">
+				<div class="labels">输入密码</div>
+				<input type="password" ng-model="acc.find.password" />
+			</div>
+			<div class="list-item">
+				<div class="labels">确认密码</div>
+				<input type="password" ng-model="acc.find.repassword" />
+			</div>
+			<div class="errorTip" ng-class="{'success':acc.findTipsStatus==='success'}" ng-bind="acc.findError"></div>
+			<button>确定</button>
+		</form>
+		<div class="others">
+			<span>没有账户？<a ng-click="acc.findShow=false;acc.registerShow=true">立即注册</a></span>
+		</div>
+	</div>
+</div>

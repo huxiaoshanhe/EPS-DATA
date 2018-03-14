@@ -1,0 +1,429 @@
+.menus {
+	a {
+		text-decoration: none;
+		color:#282828;
+		font-size:12px;
+		line-height: 30px;
+		margin: 0 10px;
+		display: inline-block;
+		cursor: pointer;
+	}
+	a.current {
+		background: #f7f7f7;
+		border:1px solid #c1c9cf;
+		padding:0 10px;
+		line-height:25px;
+		margin-top:5px;
+	}
+}
+.tableTool {
+	width:100%;
+	height:30px;
+	background:#f7f7f7;
+	padding-left: 10px;
+	a {
+		display: inline-block;
+		width:22px;
+		height:22px;
+		margin:0 3px;
+		cursor: pointer;
+		position: relative;
+		top:3px;
+		border:1px solid #f7f7f7;
+	}
+	a:hover {
+		background:#ddd;
+		border:1px solid #909090;
+		border-radius:2px;
+	}
+	a.on {
+		background:#ddd;
+		border:1px solid #909090;
+		border-radius:2px;
+	}
+	.ico {
+		position: absolute;
+		background-image:url('../assets/images/tool-chart-ico.png');
+	}
+
+	a.ico.ico-line {
+		width:1px;
+		height:20px;
+		position: relative;
+		background: #c1c9cf;
+		top:3px;
+		cursor: default;
+		border:none;
+	}
+	a.ico.ico-line:hover {
+		border:none;
+	}
+	.ico-folder {
+		width:16px;
+		height:16px;
+		background-position: 0 0;
+		left:3px;
+		top:2px;
+	}
+	.ico-save {
+		width:16px;
+		height:15px;
+		background-position: 0 -17px;
+		left:2px;
+		top:2px;
+	}
+	.ico-refresh {
+		width:14px;
+		height:14px;
+		background-position: 0 -36px;
+		left:3px;
+		top:2px;
+	}
+	.ico-downloadDoc {
+		width:14px;
+		height:15px;
+		background-position: 0 -55px;
+		left:3px;
+		top:2px;
+	}
+	.ico-downloadPdf {
+		width:14px;
+		height:15px;
+		background-position: 0 -73px;
+		left:3px;
+		top:2px;
+	}
+	.ico-rotate {
+		width:17px;
+		height:15px;
+		background-position: 0 -92px;
+		left:3px;
+		top:2px;
+	}
+	.ico-filter {
+		width:14px;
+		height:15px;
+		background-position: 0 -110px;
+		left:3px;
+		top:2px;
+	}
+	.ico-highLight {
+		width:16px;
+		height:15px;
+		background-position: 0 -128px;
+		left:2px;
+		top:2px;
+	}
+	.ico-formatConditions {
+		width:16px;
+		height:15px;
+		background-position: 0 -146px;
+		left:2px;
+		top:2px;
+	}
+	.ico-calculate {
+		width:16px;
+		height:16px;
+		background-position: 0 -165px;
+		left:2px;
+		top:2px;
+	}
+	.ico-8020Analysis {
+		width:16px;
+		height:15px;
+		background-position: 0 -184px;
+		left:2px;
+		top:2px;
+	}
+	.ico-lags {
+		width:16px;
+		height:16px;
+		background-position: 0 -222px;
+		left:2px;
+		top:2px;
+	}
+	.ico-growthRates {
+		width:16px;
+		height:16px;
+		background-position: 0 -242px;
+		left:2px;
+		top:2px;
+	}
+	.ico-log {
+		width:18px;
+		height:16px;
+		background-position: 0 -262px;
+		left:1px;
+		top:2px;
+	}
+	.ico-userDefinedFn {
+		width:20px;
+		height:16px;
+		background-position: 0 -282px;
+		left:0px;
+		top:2px;
+	}
+	.ico-routineMode {
+		width:16px;
+		height:16px;
+		background-position: 0 -302px;
+		left:2px;
+		top:2px;
+	}
+	.ico-moneyStyle {
+		width:16px;
+		height:16px;
+		background-position: 0 -321px;
+		left:2px;
+		top:3px;
+	}
+	.ico-percentStyle {
+		width:16px;
+		height:10px;
+		background-position: 0 -338px;
+		top:5px;
+		left:4px;
+	}
+	.ico-delimitStyle {
+		width:16px;
+		height:8px;
+		background-position: 0 -352px;
+		top:6px;
+		left:2px;
+	}
+	.ico-addPoint {
+		width:14px;
+		height:14px;
+		background-position: 0 -366px;
+		left:3px;
+		top:3px;
+	}
+	.ico-decreasePoint {
+		width:14px;
+		height:14px;
+		background-position: 0 -387px;
+		left:3px;
+		top:3px;
+	}
+}
+.chartTool {
+	height:30px;
+	width:100%;
+	background: #f7f7f7;
+	padding-left: 10px;
+	a {
+		display: inline-block;
+		width:22px;
+		height:22px;
+		margin:0 3px;
+		cursor: pointer;
+		position: relative;
+		top:4px;
+		border:1px solid #f7f7f7;
+		z-index:10;
+	}
+	a:hover {
+		background:#ddd;
+		border:1px solid #909090;
+	}
+	a.on {
+		background:#ddd;
+		border:1px solid #909090;
+	}
+	.ico {
+		background-image:url('../assets/images/tool-chart-ico.png');
+		position: absolute;
+	}
+	.ico-Line {
+		width:16px;
+		height:15px;
+		background-position: 0 -403px;
+		left:2px;
+		top:2px;
+	}
+	.ico-Bar {
+		width:14px;
+		height:16px;
+		background-position: 0 -418px;
+		left:3px;
+		top:2px;
+	}
+	.ico-RotateBar {
+		width:16px;
+		height:14px;
+		background-position: 0 -435px;
+		left:2px;
+		top:3px;
+	}
+	.ico-StackBar {
+		width:15px;
+		height:15px;
+		background-position: 0 -450px;
+		left:2px;
+		top:2px;
+	}
+	.ico-StackRotateBar {
+		width:16px;
+		height:14px;
+		background-position: 0 -468px;
+		left:2px;
+		top:3px;
+	}
+	.ico-Area {
+		width:15px;
+		height:15px;
+		background-position: 0 -534px;
+		left:3px;
+		top:3px;
+	}
+	.ico-Pie {
+		width:14px;
+		height:14px;
+		background-position: 0 -484px;
+		left:3px;
+		top:3px;
+	}
+	.ico-Ring {
+		width:14px;
+		height:16px;
+		background-position: 0 -550px;
+		left:3px;
+		top:2px;
+	}
+	.ico-Radar {
+		width:16px;
+		height:16px;
+		background-position: 0 -500px;
+		left:2px;
+		top:2px;
+	}
+	.ico-FillRadar {
+		width:16px;
+		height:15px;
+		background-position: 0 -567px;
+		left:2px;
+		top:2px;
+	}
+	.ico-Scatter {
+		width:16px;
+		height:14px;
+		background-position: 0 -587px;
+		left:2px;
+		top:3px;
+	}
+	.ico-coordinateAxis {
+		width:16px;
+		height:16px;
+		background-position: 0 -602px;
+		left:2px;
+		top:2px;
+	}
+	.ico-dataValue {
+		width:16px;
+		height:15px;
+		background-position: 0 -619px;
+		left:2px;
+		top:2px;
+	}
+	.ico-legend {
+		width:16px;
+		height:16px;
+		background-position: 0 -636px;
+		left:2px;
+		top:2px;
+	}
+	.ico-userDefinedChart {
+		width:15px;
+		height:15px;
+		background-position: 0 -653px;
+		left:2px;
+		top:2px;
+	}
+	.ico-downloadImage {
+		width:15px;
+		height:15px;
+		background-position: 0 -687px;
+		left:3px;
+		top:3px;
+	}
+}
+
+.mapTool {
+	width:100%;
+	height:30px;
+	background:#f7f7f7;
+	padding-left: 10px;
+	a {
+		display: inline-block;
+		width:22px;
+		height:22px;
+		margin:0 3px;
+		cursor: pointer;
+		position: relative;
+		top:4px;
+		border:1px solid #f7f7f7;
+	}
+	a:hover {
+		background:#ddd;
+		border:1px solid #909090;
+	}
+	.ico {
+		position: absolute;
+		background-image:url('../assets/images/tool-chart-ico.png');
+	}
+
+	a.ico.ico-line {
+		width:1px;
+		height:26px;
+		position: relative;
+		background: #c1c9cf;
+		top:7px;
+		cursor: default;
+		border:none;
+	}
+	a.ico.ico-line:hover {
+		border:none;
+	}
+	.ico-folder {
+		width:16px;
+		height:16px;
+		background-position: 0 0;
+		left:3px;
+		top:2px;
+	}
+	.ico-save {
+		width:16px;
+		height:15px;
+		background-position: 0 -17px;
+		left:2px;
+		top:2px;
+	}
+	.ico-refresh {
+		width:14px;
+		height:14px;
+		background-position: 0 -36px;
+		left:3px;
+		top:2px;
+	}
+	.ico-downloadDoc {
+		width:14px;
+		height:15px;
+		background-position: 0 -55px;
+		left:3px;
+		top:2px;
+	}
+	.ico-downloadPdf {
+		width:14px;
+		height:15px;
+		background-position: 0 -73px;
+		left:3px;
+		top:2px;
+	}
+	.ico-downloadMapImage {
+		width:15px;
+		height:15px;
+		background-position: 0 -687px;
+		left:3px;
+		top:3px;
+	}
+}

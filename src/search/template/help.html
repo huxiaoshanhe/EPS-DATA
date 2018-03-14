@@ -1,0 +1,61 @@
+<div ng-controller="helpCenterCtrl as hcc">
+	<div class="help-search">
+		<div class="header">
+			<span class="title"><b>?</b>帮助中心</span>
+			<span class="ico ico-close" ng-click="hcc.show = false;sc.showHelpCenter = false"></span>
+		</div>
+		<div class="body">
+			<div class="help-search-form">
+				<input type="text" class="txt" placeholder="搜索帮助" ng-model="helpKeywords" />
+				<i class="ico search-btn"></i>
+			</div>
+
+			<div class="hot-search">
+				<div class="labels">热门搜索：</div>
+				<div class="word-list">
+					<span ng-repeat="w in hcc.hotWords" ng-click="hcc.hotClick($index)">{{w}}</span>
+				</div>
+			</div>
+
+			<div class="service-video">
+				<div class="service">
+					<dl>
+						<dt>在线客服</dt>
+						<dd>
+							<a href="http://chat10.live800.com/live800/chatClient/chatbox.jsp?companyID=448316&jid=6318557147&enterurl=http%3A%2F%2Fwww%2Eepsnet%2Ecom%2Ecn%2Fch%2FSys%2FReportPage%2Easpx%3FKey%3D230%26Type%3DKE_CLASS_EXPRESSREPORT&timestamp=1344843114447&pagereferrer=" target="_blank"><img src="/search/images/image1.jpg"></a>
+						</dd>
+					</dl>
+				</div>
+				<div class="video">
+					<dl>
+						<dt>视频教程</dt>
+						<dd>
+							<a href="http://olap.epsnet.com.cn/user-guide.html#/tab2" target="_blank"><img src="/search/images/image2.jpg"></a>
+						</dd>
+					</dl>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="search-detail" ng-show="hcc.showDetail">
+		<div class="header">
+			<span class="title"><b>?</b>帮助中心</span>
+			<span class="ico ico-close" ng-click="hcc.showDetail = false"></span>
+		</div>
+		<div class="body">
+			<div class="head">
+				<div class="head-nav">
+					<a ng-click="hcc.showDetail=false;">帮助中心</a>&gt;{{hcc.currentKeywords}}
+				</div>
+				<div class="head-search">
+					<input type="text" class="txt" placeholder="搜索帮助" ng-model="helpKeywords" />
+				<i class="ico search-btn"></i>
+				</div>
+				<div class="clear"></div>
+			</div>
+			<div class="line"></div>
+			<help-result class="help-result" data="hcc.htmls"></help-result>
+		</div>
+	</div>
+</div>

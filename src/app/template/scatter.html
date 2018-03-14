@@ -1,0 +1,32 @@
+<div ng-controller="scatterCtrl as scac" ng-show="scac.show">
+	<div class="header">
+		<span class="title"><i class="ico"></i>散点图</span>
+		<span class="ico ico-close" ng-click="scac.show = false;wb.showWindow = false"></span>
+	</div>
+	<div class="body">
+		<div class="indicater-list">
+			<table>
+				<tr>
+					<th class="indicator">选择指标</th>
+					<th class="xz">X轴</th>
+					<th class="yz">Y轴</th>
+				</tr>
+				<tr ng-repeat="i in scac.indepts">
+					<td class="indicator"><div>{{i.name}}</div></td>
+					<td class="xz">
+						<span class="checkboxs" ng-class="{'selected':i.index===scac.selected.x}" ng-click="scac.selected.x = i.index"><i class="ico"></i></span>
+					</td>
+					<td class="yz">
+						<span class="checkboxs"ng-class="{'selected':scac.selected.y===i.index}" ng-click="scac.selected.y=i.index"><i class="ico"></i></span>
+					</td>
+				</tr>
+			</table>
+		</div>
+		
+		
+		<div class="buttons">
+			<span class="btn apply" ng-click="scac.goApply()">应用</span>
+			<span class="btn cancel" ng-click="scac.show=false;wb.showWindow = false">取消</span>
+		</div>
+	</div>
+</div>

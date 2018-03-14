@@ -1,0 +1,35 @@
+<div style="height:100%">
+	<map class="mapShow" data="mapc.mapData"></map>
+	<div class="mapTimes">
+		<div class="color-select">          
+      <div class="current-color"><div class="inner-border" style="background:{{mapc.currentColor}}"></div><div class="open-more" ng-click="mapc.colorOpen=!mapc.colorOpen"></div></div>         
+      <div class="color-options" ng-class="{'open':mapc.colorOpen===true}">
+        <span class="color-demo" style="background:#fe0100" ng-click="mapc.selectColor('#fe0100')"></span>
+        <span class="color-demo" style="background:#ffff00" ng-click="mapc.selectColor('#ffff00')"></span>
+        <span class="color-demo" style="background:#ff7c00" ng-click="mapc.selectColor('#ff7c00')"></span>
+        <span class="color-demo" style="background:#7bff00" ng-click="mapc.selectColor('#7bff00')"></span>
+        <span class="color-demo" style="background:#00ff01" ng-click="mapc.selectColor('#00ff01')"></span>
+        <span class="color-demo" style="background:#ff00ff" ng-click="mapc.selectColor('#ff00ff')"></span>
+        <span class="color-demo" style="background:#ff027c" ng-click="mapc.selectColor('#ff027c')"></span>
+        <span class="color-demo" style="background:#7b01ff" ng-click="mapc.selectColor('#7b01ff')"></span>
+        <span class="color-demo" style="background:#0000ff" ng-click="mapc.selectColor('#0000ff')"></span>
+        <span class="color-demo" style="background:#00ffff" ng-click="mapc.selectColor('#00ffff')"></span>
+        <span class="color-demo" style="background:#00ff7d" ng-click="mapc.selectColor('#00ff7d')"></span>
+        <span class="color-demo" style="background:#007efe" ng-click="mapc.selectColor('#007efe')"></span>
+      </div>
+    </div>
+    <div class="timesArea">      
+      <div class="timeBtns">
+        <span class="prevBtn" ng-click="mapc.timePrev()" title="上一个"></span>
+        <span class="switch" ng-class="{'on':mapc.switch===true}" ng-click="mapc.timeSwitch(mapc.switch)" title="播放/暂停"></span>
+        <span class="nextBtn" ng-click="mapc.timeNext()" title="下一个"></span>
+      </div>
+      <div class="timeLine" ng-style="mapc.timeLineStyle"></div>
+      <div class="timeList" ng-style="mapc.timeListStyle">
+        <div class="timeListInner" ng-style="mapc.timeListInnerStyle">
+          <span ng-repeat="t in mapc.times" ng-class="{'on':t.code===mapc.selectRecord.time}" ng-click="mapc.reDrawMap(t.code,'timeChange')" ng-bind="t.name"></span>
+        </div>            
+      </div> 
+    </div>
+	</div>
+</div>

@@ -1,0 +1,29 @@
+<div ng-controller="conditionStyleCtrl as csc" ng-show="csc.show">
+	<div class="header">
+		<span class="title"><i class="ico"></i>条件样式</span>
+		<span class="ico ico-close" ng-click="csc.show = false;wb.showWindow = false"></span>
+	</div>
+	<div class="body">
+		<div class="left">
+			<div class="bolder">色调</div>
+			<div class="tones">
+				<div class="tone" ng-class="{'selected':csc.selectedTone===($index+1)}" ng-repeat="ct in csc.tones" ng-click="csc.selectToneNum($index)" title="{{ct.title}}"><i class="ico ico-{{ct.name}}"></i></div>
+				<div class="clear"></div>
+			</div>
+		</div>		
+
+		<div class="right">
+			<div class="bolder">图标</div>
+			<div class="icons">
+				<div class="iconUnit conIcoWrap{{$index}}" ng-class="{'selected':csc.selectedIcon===($index+1)}" ng-repeat="ci in csc.icons" ng-click="csc.selectIconNum($index)" title="{{ci.title}}"><i class="ico {{ci.name}}"></i></div>
+				<div class="clear"></div>
+			</div>
+		</div>		
+		<div class="clear"></div>
+		<div class="buttons">
+			<span class="btn apply" ng-click="csc.goApply()">应用</span>
+			<span class="btn del" ng-click="csc.clear()">清除</span>
+			<span class="btn cancel" ng-click="csc.show = false;wb.showWindow = false">取消</span>
+		</div>
+	</div>
+</div>

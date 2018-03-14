@@ -1,0 +1,94 @@
+<div>
+	<div class="common-dimens" ng-show="!wb.showMap">
+		<div class="rc-label">行</div>
+		<div class="in-col-dimensions dimensionConnect" id="colDimens">	
+			<div class="dimen-ls" ng-repeat="r in wb.dimensions.rowDimens">
+				<div class="dimen-ls-control" id="{{r.codeName}}">
+					<div class="dimen-name"><span ng-bind="r.showName"></span>（合计{{selectedNums[r.codeName].length}}）<div class="show-tree" ng-click="toggleList(r.codeName,$event,'table')"><i class="ico ico-show-tree"></i></div></div>
+					<div ng-mousedown="preventMove($event)" class="childList" id="list-{{r.codeName}}" ng-click="preventHide($event)">
+						<div class="searWrap">
+							<div ng-if="r.codeName==='timeCode'"><div class="sear"><input type="text" id="sear-{{r.codeName}}" class="txt" placeholder="请选择" value="{{selectedTimeStr}}" readonly="readonly" ng-keyup="goSearchUp($event,r.codeName)"><i class="ico btn-time"></i></div></div>
+							<div ng-if="r.codeName!=='timeCode'"><div class="sear"><input type="text" id="sear-{{r.codeName}}" class="txt" placeholder="请输入关键字" ng-keyup="goSearchUp($event,r.codeName)"><i class="ico btn" ng-click="goSearch(r.codeName)"></i></div></div>
+						</div>
+						<div ng-if="r.codeName==='timeCode'" ng-include="'app/template/timeSearch.html'"></div>
+						<div ng-if="r.codeName!=='timeCode'" ng-include="'app/template/searList.html'" id="sear-list-{{r.codeName}}" class="search-list ztree"></div>
+						<ztree data="r.objLst" id="zt{{r.codeName}}"></ztree>
+					</div>
+				</div>					
+			</div>
+		</div>
+
+		<div class="rc-label row-label">列</div>		
+		<div class="in-row-dimensions dimensionConnect" id="rowDimens">
+			<div class="dimen-ls" ng-repeat="r in wb.dimensions.colDimens">
+				<div class="dimen-ls-control" id="{{r.codeName}}">
+					<div class="dimen-name"><span ng-bind="r.showName"></span>（合计{{selectedNums[r.codeName].length}}）<div class="show-tree" ng-click="toggleList(r.codeName,$event,'table')"><i class="ico ico-show-tree"></i></div></div>
+					<div ng-mousedown="preventMove($event)" class="childList" id="list-{{r.codeName}}" ng-click="preventHide($event)">
+						<div class="searWrap">
+							<div ng-if="r.codeName==='timeCode'"><div class="sear"><input type="text" id="sear-{{r.codeName}}" class="txt" placeholder="请选择" value="{{selectedTimeStr}}" readonly="readonly" ng-keyup="goSearchUp($event,r.codeName)"><i class="ico btn-time"></i></div></div>
+							<div ng-if="r.codeName!=='timeCode'"><div class="sear"><input type="text" id="sear-{{r.codeName}}" class="txt" placeholder="请输入关键字" ng-keyup="goSearchUp($event,r.codeName)"><i class="ico btn" ng-click="goSearch(r.codeName)"></i></div></div>
+						</div>
+						<div ng-if="r.codeName==='timeCode'" ng-include="'app/template/timeSearch.html'"></div>
+						<div ng-if="r.codeName!=='timeCode'" ng-include="'app/template/searList.html'" id="sear-list-{{r.codeName}}" class="search-list ztree"></div>
+						<ztree data="r.objLst" id="zt{{r.codeName}}"></ztree>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="rc-label">固定</div>
+		<div class="in-fixed-dimensions dimensionConnect" id="fixedDimens">
+			<div class="dimen-ls" ng-repeat="r in wb.dimensions.fixedDimens">
+				<div class="dimen-ls-control" id="{{r.codeName}}">
+					<div class="dimen-name"><span ng-bind="r.showName"></span>（合计{{selectedNums[r.codeName].length}}）<div class="show-tree" ng-click="toggleList(r.codeName,$event,'table')"><i class="ico ico-show-tree"></i></div></div>
+					<div ng-mousedown="preventMove($event)" class="childList" id="list-{{r.codeName}}" ng-click="preventHide($event)">
+						<div class="searWrap">
+							<div ng-if="r.codeName==='timeCode'"><div class="sear"><input type="text" id="sear-{{r.codeName}}" class="txt" placeholder="请选择" value="{{selectedTimeStr}}" readonly="readonly" ng-keyup="goSearchUp($event,r.codeName)"><i class="ico btn-time"></i></div></div>
+							<div ng-if="r.codeName!=='timeCode'"><div class="sear"><input type="text" id="sear-{{r.codeName}}" class="txt" placeholder="请输入关键字" ng-keyup="goSearchUp($event,r.codeName)"><i class="ico btn" ng-click="goSearch(r.codeName)"></i></div></div>
+						</div>
+						<div ng-if="r.codeName==='timeCode'" ng-include="'app/template/timeSearch.html'"></div>
+						<div ng-if="r.codeName!=='timeCode'" ng-include="'app/template/searList.html'" id="sear-list-{{r.codeName}}" class="search-list ztree"></div>
+						<ztree data="r.objLst" id="zt{{r.codeName}}"></ztree>
+					</div>
+				</div>					
+			</div>
+		</div>
+		<button ng-click="wb.sync()" class="goSync">查询</button>
+	</div>
+
+	<div class="map-dimens" ng-show="wb.showMap">
+		<div class="rc-label">地区</div>
+		<div class="in-col-dimensions dimensionConnect" id="map-region">	
+			<div class="dimen-ls" ng-repeat="r in wb.mapDimens.region">
+				<div class="dimen-ls-control" id="map-{{r.codeName}}">
+					<div class="dimen-name">{{r.showName}}<div class="show-tree" ng-click="toggleList('map-'+r.codeName,$event,'mapRegion')"><i class="ico ico-show-tree"></i></div></div>
+					<div class="childList" id="list-map-{{r.codeName}}" ng-click="preventHide($event)">
+						<div class="searWrap">
+							<div class="sear"><input type="text" id="sear-map-{{r.codeName}}" class="txt" placeholder="请输入关键字" ng-keyup="goSearchRegionUp($event,r.codeName)"><i class="ico btn" id="go-sear-{{r.codeName}}" ng-click="goSearchRegion(r.codeName)"></i></div>
+						</div>
+						<div ng-if="r.codeName==='timeCode'" ng-include="'app/template/timeSearch.html'"></div>
+						<div ng-if="r.codeName!=='timeCode'" ng-include="'app/template/searList.html'" id="sml{{r.codeName}}" class="search-list ztree"></div>
+						<map-ztree data="r.objLst" id="mapregionCode"></map-ztree>
+					</div>
+				</div>					
+			</div>
+		</div>
+
+		<div class="rc-label">固定</div>
+		<div class="in-fixed-dimensions dimensionConnect" id="map-fixed">
+			<div class="dimen-ls" ng-repeat="r in wb.mapDimens.fixed">
+				<div class="dimen-ls-control" id="map-{{r.codeName}}" ng-if="r.codeName!='timeCode'">
+					<div class="dimen-name">{{r.showName}}<div class="show-tree" ng-click="toggleList('map-'+r.codeName,$event,'map')"><i class="ico ico-show-tree"></i></div></div>
+					<div class="childList" id="list-map-{{r.codeName}}" ng-click="preventHide($event)">
+						<div class="searWrap">
+						<div class="sear"><input type="text" id="sear-map-{{r.codeName}}" class="txt" placeholder="请输入关键字" ng-keyup="goSearchMapUp($event,r.codeName)"><i class="ico btn" id="go-sear-{{r.codeName}}" ng-click="goSearchMap(r.codeName)"></i></div>
+						</div>
+						<div ng-if="r.codeName==='timeCode'" ng-include="'app/template/timeSearch.html'"></div>
+						<div ng-if="r.codeName!=='timeCode'" ng-include="'app/template/searList.html'" id="sml{{r.codeName}}" class="search-list ztree"></div>
+						<map-radio-ztree data="r.objLst" id="map-in-{{r.codeName}}"></map-radio-ztree>						
+					</div>
+				</div>					
+			</div>
+		</div>
+		<button ng-click="wb.goMap()" class="goSync">生成地图</button>
+	</div>
+</div>

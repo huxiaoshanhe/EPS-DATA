@@ -1,0 +1,78 @@
+#platform {
+	.platform-inner {
+		position:relative;
+		padding-top:30px;
+		padding-bottom:24px;
+	}
+	
+	.menus {
+		width:100%;
+		height:30px;
+		border-bottom:1px solid #c1c9cf;
+		position:absolute;
+		top:0;
+		padding-left:20px;
+		background:#f7f7f7;
+	}
+	.tableArea {
+		height:100%;
+		position:relative;
+		padding-top:30px;
+		overflow: hidden;
+		.tableTool {
+			position:absolute;
+			top:0;
+		}
+		.sheetTitle {
+			text-indent:20px;
+			height:30px;
+			line-height:30px;
+			position: absolute;
+    		top: 30px;
+    		z-index: 120;
+    		font-size:14px;
+		}
+	}
+	.chartArea {
+		height:100%;
+		position:relative;
+		padding-top:40px;
+		.chartResize {
+			height:30px;
+			width:100%;
+			position:absolute;
+			top:0;
+			z-index:5;
+			cursor:s-resize;
+		}
+		.chartTool {
+			position:absolute;
+			top:0;
+		}
+	}
+	.mapArea {
+		height:100%;
+		position:relative;
+		padding-top:40px;
+		.mapTool {
+			position:absolute;
+			top:0;
+		}
+	}
+	
+	.cubeName {
+		background:#f7f7f7;
+		border-top:1px solid #dddddd;
+		span {
+			display:inline-block;
+			height:23px;
+			background:#d1f1ff;
+			border-bottom:3px solid #134f7a;
+			line-height:22px;
+			padding:0 10px;
+			border-right:1px solid #ddd;
+			color:#000;
+			font-size:12px;
+		}
+	}
+}

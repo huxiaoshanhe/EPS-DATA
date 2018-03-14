@@ -1,0 +1,359 @@
+@import "jqueryui.scss";
+*{
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	box-sizing:border-box;
+	margin:0;padding:0;
+}
+img {
+	border:none;
+}
+.btn,.button,button{
+	cursor:pointer;
+}
+a{text-decoration:none;}
+html,body{
+	width:100%;
+	height:100%;
+	margin:0;
+	font-family:"Microsoft yahei";
+}
+ul {
+	list-style:none;
+}
+.clear {
+	clear:both;
+}
+a {
+	color:#282828;
+	cursor:pointer;
+}
+a:hover {
+	text-decoration:none;
+	color:#282828;
+}
+.ico {
+	display:inline-block;
+	background-image:url('../assets/images/icons.png');
+}
+#plat-main {
+	width:100%;
+	height:100%;
+	padding:113px 0 0 440px;
+}
+#top {
+	width:100%;
+	height:107px;
+	position:absolute;
+	left:0;
+	top:0;
+	background:#f7f7f7;
+	border-bottom:1px solid #ccc;
+	z-index:999;
+	.top-head {
+		height:80px;
+		.logo {
+			width:401px;
+			height:30px;
+			float:left;
+			margin:10px 0 0 10px;
+			img {
+				height:60px;
+			}
+		}
+		.search {
+			width:482px;
+			height:30px;
+			float:right;
+			margin:25px 20px 0 0;
+			border:1px solid #aaaaaa;
+			position:relative;
+			.txt {
+				width:418px;
+				height:28px;
+				position:absolute;
+				top:0;
+				left:0;
+				border:none;
+				text-indent:10px;
+			}
+			.txt:focus {
+				outline:none;
+			}
+			.btn {
+				width:62px;
+				height:28px;
+				background:#0d8ccc;
+				border:none;
+				position:absolute;
+				top:0;
+				right:0;
+				line-height:28px;
+				color:#fff;
+				border-radius:0;
+				padding:0;
+			}
+		}	
+	}
+	.top-message {
+		width:100%;
+		min-width:1024px;
+		position:relative;
+		height:22px;
+		line-height:22px;
+		background:#d7dde2;
+		font-size:12px;
+		box-shadow:1px 1px 1px #aaa;
+		.welcome {
+			width:310px;
+			float:left;
+			text-indent:10px;
+			color:#000000;
+			font-weight:bold;
+		}
+		.notice {
+			width:300px;
+			float:left;
+			height:20px;
+			border-left:2px solid #3b3c3d;
+			margin:1px 0 0 0;
+			line-height:20px;
+			padding-left:20px;
+			.notice-label {
+				width:85px;
+				float:left;
+				color:#EB5B34;
+				font-weight:bold;
+				.ico-notice {
+					width:16px;
+					height:12px;
+					margin-right:5px;
+					background-position:0 -144px;
+					position:relative;
+					top:1px;
+				}
+			}
+			.notice-title {
+				width:190px;
+				float:left;
+			}
+			a {color:#0D8CCC;text-decoration:none;}
+		}
+		.other-nav {
+			width:452px;
+			float:right;
+			margin-right:10px;
+			text-align:right;
+			a {
+				display:inline-block;
+				margin:0 10px;
+				color:#0D8CCC;
+				.ico {
+					width:12px;
+					height:11px;
+					margin-right:5px;;
+				}
+				.ico-help {
+					background-position:0 -176px;
+				}
+				.ico-home {
+					background-position:0 -160px;
+				}
+				.ico-sear {
+					width:14px;
+					height:14px;
+					background-position:0 -110px;
+					position:relative;
+					top:3px;
+				}
+			}
+		}
+
+		.topCut {
+			width:29px;
+			height:11px;
+			margin-left:-15px;
+			position:absolute;
+			background:#d7dde2;
+			top:23px;
+			left:50%;
+			border:1px solid #d1cfd0;
+			border-top:none;
+			border-bottom-left-radius:3px;
+			border-bottom-right-radius:3px;
+			cursor:pointer;
+			.inner {
+				margin:3px auto;
+				content:'';
+				display:block;
+				width: 0;
+			    height: 0;
+			    border-left: 5px solid transparent;
+			    border-right: 5px solid transparent;
+			    border-bottom: 5px solid #0d8ccc;
+			}
+		}		
+	}
+}
+#cubes {
+	width:250px;
+	height:100%;
+	padding-top:142px;
+	border-right:1px solid #333;
+	position:absolute;
+	left:0;top:0;
+	z-index: 100;
+	.cubesInnerWrap {
+		width:100%;
+		height:inherit;
+		overflow:auto;
+		.cubeList {
+			background:#134f7a;
+			color:#fff;
+			height:30px;
+			line-height:30px;
+			text-indent:10px;
+			font-size:14px;
+			font-weight:bold;
+		}
+	}
+	.ico-cube-switch {
+		display:block;
+		width:20px;
+		height:20px;
+		background-position:0 0;
+		position:absolute;
+		right:0;
+		top:108px;
+		cursor:pointer;
+	}
+	.ico-cube-switch.rotate {
+		transform:rotate(180deg);
+		-ms-transform:rotate(180deg);
+		-moz-transform:rotate(180deg);
+		-webkit-transform:rotate(180deg);
+		-o-transform:rotate(180deg);
+	}
+}
+#dimension {
+	width:210px;
+	height:100%;
+	background:#F0F2F3;
+	padding-top:141px;
+	border-right:1px solid #666;
+	z-index: 100;
+	position:absolute;
+	left:250px;
+	top:0;
+	z-index: 998;
+	.ico-dimen-switch {
+		display:block;
+		width:20px;
+		height:20px;
+		background-position:0 0;
+		position:absolute;
+		right:0;
+		top:114px;
+		cursor:pointer;
+	}
+	.ico-dimen-switch.rotate {
+		transform:rotate(180deg);
+		-ms-transform:rotate(180deg);
+		-moz-transform:rotate(180deg);
+		-webkit-transform:rotate(180deg);
+		-o-transform:rotate(180deg);
+	}
+}
+#platform {
+	width:100%;
+	height:100%;
+	.platform-inner {
+		width:100%;height:100%;
+	}
+}
+
+#rmenu {
+	display: block;
+	position: absolute;
+	z-index: 999;
+	background: #e8f9ff;
+	padding:5px 5px 0 5px;
+	border:1px solid #5f95d3;
+	width:210px;
+	ul {
+	    -webkit-margin-before: 0.5em;
+	    -webkit-margin-after: 0.5em;
+	    -webkit-margin-start: 0px;
+	    -webkit-margin-end: 0px;
+	    -webkit-padding-start: 0;
+		padding:0;
+		li {
+			padding:3px 20px 3px 10px;
+			cursor:pointer;
+			color:#000;
+			font-size:12px;
+		}
+		li.disabled{
+			cursor:default;
+			color:#999
+		}
+		li.group-line {
+			background:#dadada;
+			padding:1px 0 0 0;
+			margin:2px 0
+		}
+	}
+}
+.loading {
+	position:absolute;
+	z-index:1000;
+	height:100%;
+	width:100%;
+	margin-left:0px;
+	top:0;
+	left:0;
+	.loadingbg {
+		width:100%;
+		height:100%;
+		background:#ffffff;
+		filter:alpha(opacity=50); 
+		-moz-opacity:0.5; 
+		opacity:0.5;
+	}
+	.loadingImg {
+		width:150px;
+		height:150px;
+		z-index:1002;
+		position:absolute;
+		top:50%;
+		left:50%;
+		margin:-85px 0 0 -85px;
+		background:url(../assets/images/timg.gif) center no-repeat;
+	}
+}
+@import "_cube.scss";
+@import "_dimensions.scss";
+@import "_platform.scss";
+@import "_menus.scss";
+@import "_handsontable.scss";
+@import "_window.scss";
+@import "_collections.scss";
+@import "_highlight.scss";
+@import "_tableCalculate.scss";
+@import "_conditionStyle.scss";
+@import "_filter.scss";
+@import "_etAnalysis.scss";
+@import "_log.scss";
+@import "_userDefinedFn.scss";
+@import "_userDefinedChart.scss";
+@import "_ztree.scss";
+@import "_download.scss";
+@import "_errorMsg.scss";
+@import "_charts.scss";
+@import "_help.scss";
+@import "_growthRates.scss";
+@import "_map.scss";
+@import "_infomation.scss";
+@import "_saveFile.scss";
+@import "_account.scss";
+@import "_analysis.scss";

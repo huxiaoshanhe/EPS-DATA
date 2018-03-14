@@ -1,0 +1,33 @@
+<div ng-controller="tableCalculateCtrl as tcc" ng-show="tcc.show">
+	<div class="header">
+		<span class="title"><i class="ico"></i>合并计算</span>
+		<span class="ico ico-close" ng-click="tcc.show = false;wb.showWindow = false"></span>
+	</div>
+	<div class="body">		
+		<div class="colways">
+			<div class="bolder">按行</div>
+			<div class="unit" ng-repeat="r in tcc.rowWays">
+				<div ng-repeat="rc in r" ng-click="tcc.selectWay(rc.key,'row')">
+					<span class="checkboxs" ng-class="{'selected':tcc.selectedWays.rowWays.indexOf(rc.key)!==-1}"><i class="ico ico-sel"></i></span><span>{{rc.text}}</span>
+				</div>
+				<div class="clear"></div>
+			</div>				
+		</div>
+		<div class="rowways">
+			<div class="bolder">按列</div>
+			<div class="unit" ng-repeat="c in tcc.colWays">
+				<div ng-repeat="cc in c" ng-click="tcc.selectWay(cc.key,'col')">
+					<span class="checkboxs" ng-class="{'selected':tcc.selectedWays.colWays.indexOf(cc.key)!==-1}"><i class="ico ico-sel"></i></span><span>{{cc.text}}</span>
+				</div>
+				<div class="clear"></div>
+			</div>	
+		</div>
+		<div class="clear"></div>
+		
+		<div class="buttons">
+			<span class="btn apply" ng-click="tcc.goApply()">应用</span>
+			<span class="btn del" ng-click="tcc.clear()">清除</span>
+			<span class="btn cancel" ng-click="tcc.show=false;wb.showWindow = false">取消</span>
+		</div>
+	</div>
+</div>

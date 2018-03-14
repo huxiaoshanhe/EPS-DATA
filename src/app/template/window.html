@@ -1,0 +1,23 @@
+<div ng-show="wb.showWindow" class="windowWrap">
+	<div ng-controller="accountCtrl as acc" ng-show="acc.loginShow||acc.registerShow||acc.findShow" style="width:100%;height:100%; background:rgba(0,0,0,0.5);">
+		<login-win ng-show="acc.loginShow"></login-win>
+		<register-win ng-show="acc.registerShow"></register-win>
+		<find-pwd ng-show="acc.findShow"></find-pwd>
+	</div>
+	<collections class="window collections"></collections>	
+	<div ng-controller="saveFileCtrl as sfc" ng-show="sfc.show">
+		<save-file></save-file>
+		<add-folder></add-folder>
+	</div>
+	<filter class="window filter"></filter>
+	<high-light class="window highLight"></high-light>
+	<condition-style class="window conditionStyle"></condition-style>
+	<table-calculate class="window tableCalculate"></table-calculate>
+	<et-analysis class="window etAnalysis"></et-analysis>
+	<log class="window log"></log>
+	<growth-rate class="window growthRate"></growth-rate>
+	<scatter class="window scatter"></scatter>
+	<user-defined-fn class="window userDefindedFn"></user-defined-fn>
+	<user-defined-chart class="window userDefindedChart"></user-defined-chart>
+	<infomation class="window infomation"></infomation>
+</div>

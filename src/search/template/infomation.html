@@ -1,0 +1,40 @@
+<div>
+	<div class="header">
+		<span class="title"><i class="ico"></i>指标信息</span>
+		<span class="ico ico-close" ng-click="close()"></span>
+	</div>
+	<div class="body">
+		<div class="content">
+			<dl>
+				<dt>区域：</dt>
+				<dd class="con">{{data.area}}</dd>
+				<dd class="clear"></dd>
+			</dl>
+			<dl>
+				<dt>频度：</dt>
+				<dd class="con">{{data.frequent}}</dd>
+				<dd class="clear"></dd>
+			</dl>
+			<dl>
+				<dt>时间：</dt>
+				<dd class="con">{{data.timeLimit}}</dd>
+				<dd class="clear"></dd>
+			</dl>
+			<dl>
+				<dt>来源：</dt>
+				<dd class="con">{{data.sourceZh}}</dd>
+				<dd class="clear"></dd>
+			</dl>
+			<dl>
+				<dt>全称：</dt>
+				<dd class="con">{{data.indicatorNameZh}}</dd>
+				<dd class="clear"></dd>
+			</dl>
+			<dl ng-show="data.comment_zh">
+				<dt>批注：</dt>
+				<dd class="con">{{data.comment_zh}}</dd>
+				<dd class="clear"></dd>
+			</dl>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,28 @@
+<div ng-controller="userDefinedFnCtrl as udfc" ng-show="udfc.show">
+	<div class="header">
+		<span class="title"><i class="ico"></i>自定义函数</span>
+		<span class="ico ico-close" ng-click="udfc.show = false;wb.showWindow = false"></span>
+	</div>
+	<div class="body">
+		<div class="bolder">序列</div>
+		<div class="sortOrder">
+			<div class="selectConditons">
+				<div class="selectedConditon">无</div>
+				<i class="ico ico-dropdown"></i>
+				<ul class="list">
+					<li>aa</li>
+				</ul>
+			</div>
+		</div>
+		<div class="bolder">自定义函数</div>
+		<div class="fnInput">
+			<input type="text" ng-model="udfc.formula" />
+		</div>
+		
+		<div class="buttons">
+			<span class="btn apply">应用</span>
+			<span class="btn del">清除</span>
+			<span class="btn cancel">取消</span>
+		</div>
+	</div>
+</div>

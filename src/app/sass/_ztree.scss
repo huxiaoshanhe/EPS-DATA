@@ -1,0 +1,36 @@
+.ztree li a {
+	padding:0;
+}
+.ztree li a:hover{
+	text-decoration:none;
+}
+.ztree li a.curSelectedNode {
+	border: none;
+	background-color:#fff;
+}
+.ztree li span.button.chk.checkbox_false_disable,
+.ztree li span.button.chk.checkbox_true_disable {
+	display:none;
+}
+.ztree li span.button.switch {
+	position: relative;
+    top: -2px;
+}
+.ztree li span.button.chk.radio_false_disable{
+	display:none;
+}
+.ztree li span.button.chk.radio_false_full,
+.ztree li span.button.chk.radio_true_full,
+.ztree li span.button.chk.radio_false_part {
+	display:none;
+}
+.ztree li span.button.ico_docu {display:none;}
+
+.in-fixed-dimensions {
+	.ztree li span.button.chk.checkbox_false_full,
+	.ztree li span.button.chk.checkbox_true_full,
+	.ztree li span.button.chk.checkbox_false_part,
+	.ztree li span.button.chk.checkbox_true_part {
+		display:none;
+	}
+} 

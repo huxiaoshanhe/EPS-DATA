@@ -1,0 +1,145 @@
+<div ng-controller="userDefinedChartCtrl as udcc" ng-show="udcc.show">
+	<div class="header">
+		<span class="title"><i class="ico"></i>自定义图表</span>
+		<span class="ico ico-close" ng-click="udcc.show = false;wb.showWindow = false"></span>
+	</div>
+	<div class="body">
+		<div class="chartName">
+			<div class="bolder">图表名称</div>
+			<input type="text" class="txt" ng-model="udcc.chartName" />
+		</div>
+		<div class="chartType">
+			<div class="bolder">图表类型</div>
+			<div class="selectType">
+				<div class="selectedType">{{udcc.selectedType.title}} <i class="ico dropdown"></i></div>
+				<ul class="list typeList">
+					<li ng-repeat="t in udcc.typeList" ng-click="udcc.selectType(t.name,t.title)">{{t.title}}</li>
+				</ul>
+			</div>
+		</div>
+		<div class="clear"></div>
+		<div class="cover" ng-show="udcc.selectedType.name=='pie'||udcc.selectedType.name=='radar'"></div>
+		<div class="sortOrder">
+			<div class="bolder">序列</div>
+			<div class="selectOrder">
+				<div class="selectedOrder">{{udcc.selectedOrder.name}} <i class="ico dropdown"></i></div>
+				<ul class="list orderList">
+					<li ng-repeat="o in udcc.orderList" ng-click="udcc.selectOrder(o.name,$index)">{{o.name}}</li>
+				</ul>
+			</div>
+		</div>
+		<div class="otherSet">
+			<div class="orderType">
+				<div class="bolder normal">序列类型：</div>
+				<div class="selectType2">
+					<div class="selectedType">{{udcc.currentOrder.title}}<i class="ico dropdown"></i></div>
+					<ul class="list typeList2">
+						<li ng-repeat="t in udcc.secondTypeList" ng-click="udcc.selectType2(t.name,t.title)">{{t.title}}</li>
+					</ul>
+				</div>
+				<label ng-click="udcc.selectSecondXAxis(!udcc.currentOrder.isSecond)"><span class="checkboxs" ng-class="{'selected':udcc.currentOrder.isSecond==true}"><i class="ico"></i></span>第二坐标轴上的位置</label>
+				<div class="clear"></div>
+			</div>
+			<div class="lineAttr" ng-show="udcc.showLine">
+				<div class="lineColor">
+					<div class="bolder normal">线条颜色：</div>
+					<div class="colorSelect">
+						<div class="selectedColor" style="background: {{udcc.selectedType2[udcc.currentOrderNum].color}}"></div>
+						<i class="ico dropdown"></i>
+						<div class="colors list">
+							<div class="common-colors">
+								<span ng-repeat="c1 in udcc.colors.commonUseColor" style="background: {{c1}}" ng-click="udcc.selectColor(c1)"></span>
+							</div>
+							<div class="color-list">
+								<div class="unit" ng-repeat="cc in udcc.colors.colorList">
+									<span ng-repeat="c2 in cc" style="background: {{c2}}" ng-click="udcc.selectColor(c2)"></span>
+								</div>
+								<div class="clear"></div>
+							</div>
+							<div class="other-color">
+								<span ng-repeat="c3 in udcc.colors.otherColor" style="background: {{c3}}" ng-click="udcc.selectColor(c3)"></span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="fillIn" ng-show="!udcc.showLine">
+				<div class="baseColor" style="margin-left:5px;">
+					<div class="bolder normal">基本色：</div>
+					<div class="bscolorSelect">
+						<div class="selectedColor" style="background: {{udcc.selectedType2[udcc.currentOrderNum].color}}"></div>
+						<i class="ico dropdown"></i>
+						<div class="colors list">
+							<div class="common-colors">
+								<span ng-repeat="c1 in udcc.colors.commonUseColor" style="background: {{c1}}" ng-click="udcc.selectColor(c1)"></span>
+							</div>
+							<div class="color-list">
+								<div class="unit" ng-repeat="cc in udcc.colors.colorList">
+									<span ng-repeat="c2 in cc" style="background: {{c2}}" ng-click="udcc.selectColor(c2)"></span>
+								</div>
+								<div class="clear"></div>
+							</div>
+							<div class="other-color">
+								<span ng-repeat="c3 in udcc.colors.otherColor" style="background: {{c3}}" ng-click="udcc.selectColor(c3)"></span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="clear"></div>
+			</div>
+		</div>
+
+		<div class="view">
+			<div class="bolder">视图：</div>
+			<div class="bgColor">
+				<div class="bolder normal">背景颜色：</div>
+				<div class="colorSelect">
+					<div class="selectedColor" style="background: {{udcc.selectedBgColor}}"></div>
+					<i class="ico dropdown"></i>
+					<div class="colors list">
+						<div class="common-colors">
+							<span ng-repeat="c1 in udcc.colors.commonUseColor" style="background: {{c1}}" ng-click="udcc.selectedBgColor = c1"></span>
+						</div>
+						<div class="color-list">
+							<div class="unit" ng-repeat="cc in udcc.colors.colorList">
+								<span ng-repeat="c2 in cc" style="background: {{c2}}" ng-click="udcc.selectedBgColor = c2"></span>
+							</div>
+							<div class="clear"></div>
+						</div>
+						<div class="other-color">
+							<span ng-repeat="c3 in udcc.colors.otherColor" style="background: {{c3}}" ng-click="udcc.selectedBgColor = c3"></span>
+						</div>
+					</div>
+				</div>
+				<label ng-click="udcc.showGrid=!udcc.showGrid"><span class="checkboxs" ng-class="{'selected':udcc.showGrid===true}"><i class="ico"></i></span>显示网格线</label>
+			</div>
+		</div>
+		<div class="dataLable">
+			<div class="bolder">标签：</div>
+			<div class="dataLabels">
+				<label ng-click="udcc.showDataLabel=!udcc.showDataLabel"><span class="checkboxs" ng-class="{'selected':udcc.showDataLabel===true}"><i class="ico"></i></span>显示数据标签</label>				
+			</div>
+		</div>
+		<div class="clear"></div>
+		<div class="lengend">
+			<div class="bolder normal">图例：</div>
+			<div class="lengendSet">
+				<label ng-click="udcc.showlegend=!udcc.showlegend"><span class="checkboxs" ng-class="{'selected':udcc.showlegend===true}"><i class="ico"></i></span>显示图例</label>
+				<div class="selectPosition">
+					<input class="selectedPosition" ng-disabled="udcc.showlegend!==true" ng-model="udcc.selectedPosition.title" />
+					<i class="ico dropdown"></i>
+					<ul class="list positionList">
+						<li ng-repeat="p in udcc.lengendPosition" ng-click="udcc.selectPosition(p.name,p.title)">{{p.title}}</li>
+					</ul>
+				</div>
+				<div class="cover2" ng-show="udcc.showlegend!==true"></div>
+				<div class="clear"></div>
+			</div>
+		</div>
+
+		<div class="buttons">
+			<span class="btn apply" ng-click="udcc.goApply()">应用</span>
+			<span class="btn cancel" ng-click="udcc.show = false;wb.showWindow = false">取消</span>
+		</div>
+	</div>
+</div>

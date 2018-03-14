@@ -1,0 +1,43 @@
+<div class="window registerWin">
+	<div class="header">
+		<span class="title">个人收藏账号注册</span>
+		<span class="ico ico-close" ng-click="acc.registerShow=false;wb.showWindow = false"></span>
+	</div>
+	<div class="body">
+		<form ng-submit="acc.goRegister()">
+			<div class="list-item">
+				<div class="labels"><span class="red">*</span>昵<span class="split"></span>称</div>
+				<input type="text" ng-model="acc.register.nickname" />
+			</div>
+
+			<div class="list-item">
+				<div class="labels"><span class="red">*</span>输入密码</div>
+				<input type="password" ng-model="acc.register.password" />
+			</div>
+			<div class="list-item">
+				<div class="labels"><span class="red">*</span>确认密码</div>
+				<input type="password" ng-model="acc.register.repassword" />
+			</div>
+			<div class="list-item">
+				<div class="labels"><span class="red">*</span>验证邮箱</div>
+				<input type="text" ng-model="acc.register.email" />
+			</div>
+			<div class="list-item">
+				<div class="labels"><span class="red"></span>院<span class="split"></span>系</div>
+				<input type="text" ng-model="acc.register.college" />
+			</div>
+			<div class="list-item">
+				<div class="labels"><span class="red">*</span>验<span class="split">证</span>码</div>
+				<input type="text" ng-model="acc.register.code" class="short" />
+				<a type="button" class="button" ng-disabled="acc.registerSendDisabled" ng-class="{'disabled':acc.registerSendDisabled}" ng-click="acc.sendRegisterCode()">{{acc.registerSend}}</a>
+			</div>
+			<div class="errorTip" ng-class="{'success':acc.registerTipsStatus==='success'}" ng-bind="acc.registerError"></div>
+			<div class="agreement"><span ng-click="acc.register.isAgree=!acc.register.isAgree"><span class="checkbox" ng-class="{'on':acc.register.isAgree}"></span>我已阅读</span><a href="http://oldolap.epsnet.com.cn/agreement.html" target="_blank">《EPS用户使用协议》</a></div>
+			<button>注册</button>
+		</form>
+		<div class="others">
+			<span>已有账户？<a ng-click="acc.registerShow=false;acc.loginShow = true">立即登录</a></span>
+		</div>
+		<div class="statement">提示：此帐号仅限在当前机构IP范围内使用</div>
+	</div>
+</div>

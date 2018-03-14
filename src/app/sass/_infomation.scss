@@ -1,0 +1,34 @@
+.infomation {
+	width:569px;
+	margin-left:-284px;
+	.header {
+		cursor:move;
+		.title {
+			margin-left:8px;
+		}
+	}
+	.body {
+		background:#fff;
+		min-height:200px;
+		max-height:500px;
+		overflow:auto;
+		.content {
+			margin:10px;
+			dl {
+				width:100%;
+				margin:10px 0;
+				dt {
+					width:110px;
+					float:left;
+				}
+				dd {
+					width:437px;
+					float:left;
+					-webkit-margin-start: 0;
+					-moz-margin-start: 0;
+					margin-start: 0;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,84 @@
+<div ng-controller="etAnalysisCtrl as eac" ng-show="eac.show">
+	<div class="header">
+		<span class="title"><i class="ico"></i>80/20分析</span>
+		<span class="ico ico-close" ng-click="eac.show = false;wb.showWindow = false"></span>
+	</div>
+	<div class="body">
+		<div class="statement">帕累托分析显示选中一组数值中较大的数值, 最小一部分数值仅显示合计值（这部分数值的合计正好占这组数值的总和的20%）。</div>
+		
+		<div class="selectRow">
+			<div class="bolder">分析列</div>
+			<div class="selectConditons">
+				<div class="selectedConditon">{{eac.selectedCols.name}}</div>
+				<i class="ico ico-dropdown"></i>
+				<ul class="list">
+					<li ng-repeat="c in eac.cols" ng-click="eac.selectCols(c.index,c.key)">{{c.key}}</li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="stylesConditions">
+			<span class="bold">样式：</span>
+			<div class="styles">
+				<div class="bgcolor">
+					<span>单元格背景：</span>
+					<div class="colorSelect bgColors">
+						<div class="selectedColor" style="background: {{eac.selectedBgColor}}"></div>
+						<i class="ico dropdown"></i>
+						<div class="colors">
+							<div class="common-colors">
+								<span ng-repeat="c1 in eac.colors.commonUseColor" style="background: {{c1}}" ng-click="eac.selectedBgColor = c1"></span>
+							</div>
+							<div class="color-list">
+								<div class="unit" ng-repeat="cc in eac.colors.colorList">
+									<span ng-repeat="c2 in cc" style="background: {{c2}}" ng-click="eac.selectedBgColor = c2"></span>
+								</div>
+								<div class="clear"></div>
+							</div>
+							<div class="other-color">
+								<span ng-repeat="c3 in eac.colors.otherColor" style="background: {{c3}}" ng-click="eac.selectedBgColor = c3"></span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="bgcolor bgcolor2">
+					<span>字体颜色：</span>
+					<div class="colorSelect fontColors">
+						<div class="selectedColor" style="background: {{eac.selectedColor}}"></div>
+						<i class="ico dropdown"></i>
+						<div class="colors">
+							<div class="common-colors">
+								<span ng-repeat="c1 in eac.colors.commonUseColor" style="background: {{c1}}" ng-click="eac.selectedColor = c1"></span>
+							</div>
+							<div class="color-list">
+								<div class="unit" ng-repeat="cc in eac.colors.colorList">
+									<span ng-repeat="c2 in cc" style="background: {{c2}}" ng-click="eac.selectedColor = c2"></span>
+								</div>
+								<div class="clear"></div>
+							</div>
+							<div class="other-color">
+								<span ng-repeat="c3 in eac.colors.otherColor" style="background: {{c3}}" ng-click="eac.selectedColor = c3"></span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="fontSize">
+					<span>字体大小：</span>
+					<input type="number" ng-model="eac.selectedFontSize" min="12" />
+				</div>
+				<div class="clear"></div>
+			</div>
+		</div>
+		
+		<div class="fontStyles">
+			<a ng-repeat="fs in eac.fontStyles" ng-click="eac.selectStyles(fs.id)"><span class="checkboxs" ng-class="{'selected':eac.selectedStyles.indexOf(fs.id)!==-1}"><i class="ico ico-sel"></i></span><span ng-style="fs.style">{{fs.name}}</span></a>
+		</div>
+		
+		
+		<div class="buttons">
+			<span class="btn apply" ng-click="eac.goApply()">应用</span>
+			<span class="btn del" ng-click="eac.clear()">清除</span>
+			<span class="btn cancel" ng-click="eac.show=false;wb.showWindow=false">取消</span>
+		</div>
+	</div>
+</div>

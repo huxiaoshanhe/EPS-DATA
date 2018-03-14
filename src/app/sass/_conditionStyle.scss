@@ -1,0 +1,175 @@
+.conditionStyle {
+	width:384px;
+	margin-left:-222px;
+	.header {
+		cursor:move;
+		.title {
+			margin-left:9px;
+			.ico {
+				width:16px;
+				height:15px;
+				background-image:url(../assets/images/tool-chart-ico.png);
+				background-position:0 -146px;
+				position:relative;
+				top:3px;
+				margin-right:2px;
+			}
+		}
+	}
+	.body {
+		background:#fff;
+		.left{
+			width:160px;
+			float:left;
+		}	
+		.right{
+			width:170px;
+			float:right;
+		}	
+		.bolder{
+			font-size:14px;
+			font-weight:bolder;
+			line-height:30px;
+			margin:10px;
+			text-indent:10px;
+		}
+		.tones {
+			margin:0 10px;
+			.tone {
+				width:44px;
+				height:39px;
+				float:left;
+				margin:0 16px 15px 0;
+				cursor:pointer;
+				.ico {
+					display:block;
+					width:29px;
+					height:25px;
+					margin:7px auto;
+				}
+				.ico-greenRed {
+					background-position:-21px 0;
+				}
+				.ico-redGreen {
+					background-position:-21px -26px;
+				}
+				.ico-yellowOrange {
+					background-position:-21px -52px;
+				}
+				.ico-orangeYellow {
+					background-position:-21px -78px;
+				}
+				.ico-purpleRed {
+					background-position:-21px -104px;
+				}
+				.ico-redPurple {
+					background-position:-21px -130px;
+				}
+				.ico-greenYellow {
+					background-position:-21px -156px;
+				}
+				.ico-yellowGreen {
+					background-position:-21px -182px;
+				}				
+			}
+			.tone:hover,.tone.selected {
+				background:#e9eef2;
+			}
+		}
+		.icons {
+			margin:0 10px;
+			.iconUnit {
+				width:90px;
+				height:28px;
+				float:left;
+				margin:5px 5px 20px 5px;
+				cursor:pointer;
+				.ico {
+					width:79px;
+					position:relative;
+				}
+				.icona {
+					height:12px;
+					background-position:-21px -208px;
+					top:6px;
+					left:8px;
+				}
+				.iconb {
+					height:15px;
+					background-position:-21px -221px;
+					top:6px;
+					left:8px;
+				}
+				.iconc {
+					height:13px;
+					background-position:-21px -237px;
+					top:6px;
+					left:8px;
+				}
+				.icond {
+					height:11px;
+					background-position:-21px -251px;
+					top:5px;
+					left:8px;
+				}
+				.icone {
+					height:14px;
+					background-position:-21px -263px;
+					top:6px;
+					left:8px;
+				}
+				.iconf {
+					height:14px;
+					background-position:-21px -278px;
+					top:6px;
+					left:8px;
+				}
+				.icong {
+					height:14px;
+					background-position:-21px -292px;
+					top:6px;
+					left:8px;
+				}
+				.iconh {
+					height:15px;
+					background-position:-21px -306px;
+					top:6px;
+					left:8px;
+				}
+				.iconi {
+					height:14px;
+					background-position:-21px -322px;
+					top:6px;
+					left:8px;
+				}
+				.iconj {
+					height:14px;
+					background-position:-21px -337px;
+					top:6px;
+					left:8px;
+				}
+				.iconk {
+					height:14px;
+					background-position:-21px -352px;
+					top:6px;
+					left:8px;
+				}
+				.iconl {
+					height:14px;
+					background-position:-21px -367px;
+					top:6px;
+					left:8px;
+				}
+			}
+			.conIcoWrap0,.conIcoWrap1,
+			.conIcoWrap2,.conIcoWrap3,
+			.conIcoWrap6,.conIcoWrap7,
+			.conIcoWrap8,.conIcoWrap10 {
+				display:none;
+			}
+			.iconUnit:hover,.iconUnit.selected {
+				background:#ebeff2;
+			}
+		}
+	}
+}

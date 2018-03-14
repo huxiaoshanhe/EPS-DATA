@@ -1,0 +1,62 @@
+.tableCalculate {
+	width:567px;
+	margin-left:-283px;
+	.header {
+		cursor:move;
+		.title {
+			margin-left:9px;
+			.ico {
+				width:16px;
+				height:15px;
+				background-image:url(../assets/images/tool-chart-ico.png);
+				background-position:0 -165px;
+				position:relative;
+				top:3px;
+				margin-right:2px;
+			}
+		}
+	}
+	.body {
+		background:#fff;
+		.bolder {
+			font-size:14px;
+			text-indent:10px;
+			font-weight:bold;
+			padding-top:10px;
+			line-height:40px;
+		}
+		.colways {
+			float:left;
+			width:230px;
+		}
+		.rowways {
+			float:right;
+			width:230px;
+		}
+		.unit {
+			width:105px;
+			float:left;
+			margin-left:10px;
+			div {
+				height:28px;
+				line-height:28px;
+				font-size:12px;
+				cursor:pointer;
+				.checkboxs {
+					display:inline-block;
+					width:10px;
+					height:10px;
+					background:url(../assets/images/icons.png) -22px 0;
+					position:relative;
+					top:9px;
+					margin-right:3px;
+				}
+				.checkboxs.selected {
+					background:url(../assets/images/icons.png) -22px -15px;
+				}
+			}
+			div.clear {height:0;}
+		}
+		
+	}
+}

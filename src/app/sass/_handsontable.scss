@@ -1,0 +1,439 @@
+.hansontable {
+	font-size:12px;
+}
+.handsontable table.htCore {
+	border-collapse:collapse;border-spacing:1;
+}
+.handsontable th, .handsontable td,.handsontable .htDimmed {
+	vertical-align:middle;
+	max-width:250px;
+}
+.handsontable th {
+    background-color: #fff;
+    color: #fff;
+}
+.handsontable th:first-child, .handsontable td:first-of-type, .handsontable thead tr th:nth-child(2), .handsontable .htNoFrame + th, .handsontable .htNoFrame + td {
+	border:none;
+}
+.handsontable tr:first-child th, .handsontable tr:first-child td {
+	border:none;
+}
+.handsontable th, .handsontable td {
+	border:none;
+	line-height:24px;
+}
+.handsontable tr:nth-child(odd) {
+	background:#EBEEF1;
+}
+.handsontable tr:nth-child(even) {
+	background:#fff;
+}
+.handsontable .htDimmed {
+	background:none;
+	color:#282828;
+}
+.handsontable tr:first-child td {
+	border-top:1px solid #134f7a;
+	border-bottom:1px solid #134f7a;
+	background:#ebeef1;
+	border-right:1px solid #fff;
+}
+
+.handsontable thead tr:first-child th, .handsontable thead tr:first-child td {
+	background:#fff;
+	border-top:none;
+}
+.handsontable.ht_clone_left .wtHider .wtSpreader .htCore tr:nth-child(odd) {
+	background:#eee;
+}
+.handsontable tr:nth-child(even) td:first-of-type {
+	background:#ebeef1;
+}
+.handsontable .icon-sort {
+	display:block;
+	width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid #282828;
+	cursor:pointer;
+	margin:0 auto;
+}
+.handsontable .icon-sort.gt {
+	display:block;
+	width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid #1CBE1C;
+    border-bottom: 0;
+	cursor:pointer;
+	margin:0 auto;
+}
+.handsontable .icon-sort.lt {
+	display:block;
+	width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-bottom: 5px solid #1CBE1C;
+    border-top: 0;
+	cursor:pointer;
+	margin:0 auto;
+}
+.handsontable .icon-info {
+	display:inline-block;
+	width:16px;
+	height:16px;
+	background-image:url(../assets/images/icons.png);
+	background-position:-22px -45px;
+	position:relative;
+	top:5px;
+	left:2px;
+	cursor:pointer;
+}
+.handsontable .icon-info:hover {
+	background-position:-22px -64px;
+}
+.handsontable .icon-constyle {
+	background-image:url(../assets/images/window-icons.png);
+	display:inline-block;
+	position:relative;
+	margin-right:2px;
+}
+.handsontable .icon-a1 {
+	width:12px;
+	height:12px;
+	background-position:-21px -208px;
+	top:1px;
+}
+.handsontable .icon-a2 {
+	width:12px;
+	height:12px;
+	background-position:-37px -208px;
+	top:1px;
+}
+.handsontable .icon-a3 {
+	width:12px;
+	height:12px;
+	background-position:-53px -208px;
+	top:1px;
+}
+.handsontable .icon-b1 {
+	width:16px;
+	height:15px;
+	background-position:-21px -221px;
+	top:3px;
+}
+.handsontable .icon-b2 {
+	width:16px;
+	height:15px;
+	background-position:-37px -221px;
+	top:3px;
+}
+.handsontable .icon-b3 {
+	width:16px;
+	height:15px;
+	background-position:-53px -221px;
+	top:3px;
+}
+.handsontable .icon-c1 {
+	width:14px;
+	height:13px;
+	background-position:-21px -237px;
+	top:3px;
+}
+.handsontable .icon-c2 {
+	width:14px;
+	height:13px;
+	background-position:-37px -237px;
+	top:3px;
+}
+.handsontable .icon-c3 {
+	width:14px;
+	height:13px;
+	background-position:-53px -237px;
+	top:3px;
+}
+.handsontable .icon-c4 {
+	width:14px;
+	height:13px;
+	background-position:-69px -237px;
+	top:3px;
+}
+.handsontable .icon-c5 {
+	width:14px;
+	height:13px;
+	background-position:-85px -237px;
+	top:3px;
+}
+.handsontable .icon-d1 {
+	width:12px;
+	height:11px;
+	background-position:-21px -251px;
+	top:1px;
+}
+.handsontable .icon-d2 {
+	width:12px;
+	height:11px;
+	background-position:-37px -251px;
+	top:1px;
+}
+.handsontable .icon-d3 {
+	width:12px;
+	height:11px;
+	background-position:-53px -251px;
+	top:1px;
+}
+.handsontable .icon-d4 {
+	width:12px;
+	height:11px;
+	background-position:-69px -251px;
+	top:1px;
+}
+.handsontable .icon-d5 {
+	width:12px;
+	height:11px;
+	background-position:-85px -251px;
+	top:1px;
+}
+.handsontable .icon-e1 {
+	width:15px;
+	height:14px;
+	background-position:-21px -263px;
+	top:3px;
+}
+.handsontable .icon-e2 {
+	width:15px;
+	height:14px;
+	background-position:-37px -263px;
+	top:3px;
+}
+.handsontable .icon-e3 {
+	width:15px;
+	height:14px;
+	background-position:-53px -263px;
+	top:3px;
+}
+.handsontable .icon-e4 {
+	width:15px;
+	height:14px;
+	background-position:-69px -263px;
+	top:3px;
+}
+.handsontable .icon-e5 {
+	width:15px;
+	height:14px;
+	background-position:-85px -263px;
+	top:3px;
+}
+.handsontable .icon-f1 {
+	width:15px;
+	height:14px;
+	background-position:-21px -278px;
+	top:3px;
+}
+.handsontable .icon-f2 {
+	width:15px;
+	height:14px;
+	background-position:-37px -278px;
+	top:3px;
+}
+.handsontable .icon-f3 {
+	width:15px;
+	height:14px;
+	background-position:-53px -278px;
+	top:3px;
+}
+.handsontable .icon-f4 {
+	width:15px;
+	height:14px;
+	background-position:-69px -278px;
+	top:3px;
+}
+.handsontable .icon-f5 {
+	width:15px;
+	height:14px;
+	background-position:-85px -278px;
+	top:3px;
+}
+.handsontable .icon-g1 {
+	width:15px;
+	height:13px;
+	background-position:-21px -293px;
+	top:2px;
+}
+.handsontable .icon-g2 {
+	width:15px;
+	height:13px;
+	background-position:-37px -293px;
+	top:2px;
+}
+.handsontable .icon-g3 {
+	width:15px;
+	height:13px;
+	background-position:-53px -293px;
+	top:2px;
+}
+.handsontable .icon-g4 {
+	width:15px;
+	height:13px;
+	background-position:-69px -293px;
+	top:2px;
+}
+.handsontable .icon-g5 {
+	width:15px;
+	height:13px;
+	background-position:-85px -293px;
+	top:2px;
+}
+.handsontable .icon-h1 {
+	width:15px;
+	height:13px;
+	background-position:-21px -307px;
+	top:2px;
+}
+.handsontable .icon-h2 {
+	width:15px;
+	height:13px;
+	background-position:-37px -307px;
+	top:2px;
+}
+.handsontable .icon-h3 {
+	width:15px;
+	height:13px;
+	background-position:-53px -307px;
+	top:2px;
+}
+.handsontable .icon-h4 {
+	width:15px;
+	height:13px;
+	background-position:-69px -307px;
+	top:2px;
+}
+.handsontable .icon-h5 {
+	width:15px;
+	height:13px;
+	background-position:-85px -307px;
+	top:2px;
+}
+.handsontable .icon-i1 {
+	width:14px;
+	height:14px;
+	background-position:-21px -322px;
+	top:3px;
+}
+.handsontable .icon-i2 {
+	width:14px;
+	height:14px;
+	background-position:-37px -322px;
+	top:3px;
+}
+.handsontable .icon-i3 {
+	width:14px;
+	height:14px;
+	background-position:-53px -322px;
+	top:3px;
+}
+.handsontable .icon-i4 {
+	width:14px;
+	height:14px;
+	background-position:-69px -322px;
+	top:3px;
+}
+.handsontable .icon-i5 {
+	width:14px;
+	height:14px;
+	background-position:-85px -322px;
+	top:3px;
+}
+.handsontable .icon-j1 {
+	width:14px;
+	height:14px;
+	background-position:-21px -337px;
+	top:3px;
+}
+.handsontable .icon-j2 {
+	width:14px;
+	height:14px;
+	background-position:-37px -337px;
+	top:3px;
+}
+.handsontable .icon-j3 {
+	width:14px;
+	height:14px;
+	background-position:-53px -337px;
+	top:3px;
+}
+.handsontable .icon-j4 {
+	width:14px;
+	height:14px;
+	background-position:-69px -337px;
+	top:3px;
+}
+.handsontable .icon-j5 {
+	width:14px;
+	height:14px;
+	background-position:-85px -337px;
+	top:3px;
+}
+.handsontable .icon-k1 {
+	width:14px;
+	height:14px;
+	background-position:-21px -352px;
+	top:3px;
+}
+.handsontable .icon-k2 {
+	width:14px;
+	height:14px;
+	background-position:-37px -352px;
+	top:3px;
+}
+.handsontable .icon-k3 {
+	width:14px;
+	height:14px;
+	background-position:-53px -352px;
+	top:3px;
+}
+.handsontable .icon-k4 {
+	width:14px;
+	height:14px;
+	background-position:-69px -352px;
+	top:3px;
+}
+.handsontable .icon-k5 {
+	width:14px;
+	height:14px;
+	background-position:-85px -352px;
+	top:3px;
+}
+.handsontable .icon-l1 {
+	width:12px;
+	height:14px;
+	background-position:-21px -367px;
+	top:3px;
+}
+.handsontable .icon-l2 {
+	width:12px;
+	height:14px;
+	background-position:-37px -367px;
+	top:3px;
+}
+.handsontable .icon-l3 {
+	width:12px;
+	height:14px;
+	background-position:-53px -367px;
+	top:3px;
+}
+.handsontable .icon-l4 {
+	width:12px;
+	height:14px;
+	background-position:-69px -367px;
+	top:3px;
+}
+.handsontable .icon-l5 {
+	width:12px;
+	height:14px;
+	background-position:-85px -367px;
+	top:3px;
+}

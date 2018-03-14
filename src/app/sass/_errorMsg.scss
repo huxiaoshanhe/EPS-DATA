@@ -1,0 +1,19 @@
+.errorMsg {
+	width:569px;
+	margin-left:-284px;
+	.header {
+		cursor:move;
+		.title {
+			margin-left:8px;
+		}
+	}
+	.body {
+		background:#fff;
+		.errorCon {
+			width:547px;
+			margin:10px auto;
+			text-align:center;
+			color:#f00;
+		}
+	}
+}

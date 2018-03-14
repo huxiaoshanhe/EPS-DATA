@@ -1,0 +1,238 @@
+.collections {
+	width:475px;
+	margin-left:-237px;
+	height:454px;
+	background:#f7f7f7;
+	.header {
+		cursor:move;
+		.title {
+			margin-left:9px;
+			.ico {
+				width:15px;
+				height:16px;
+				background-position:0 -340px;
+				position:relative;
+				top:3px;
+				margin-right:2px;
+			}
+		}
+	}
+	.body {
+		height:419px;
+		width:475px;
+		
+		.folderSelect {
+			width:220px;
+			height:32px;
+			border:1px solid #aaa;
+			float:left;
+			margin-left:11px;
+			margin-top:36px;
+			background:#fff;
+			position:relative;
+			.ico {
+				display:block;
+				width:15px;
+				height:12px;
+				background:url('../assets/images/window-icons.png') 0 -106px;
+				position:absolute;
+				top:9px;
+				left:5px;
+			}
+			.currentFolder {
+				position:absolute;
+				width:165px;
+				height:30px;
+				left:22px;
+				text-overflow:ellipsis;
+				white-space:nowrap;
+				overflow:hidden;
+				line-height:30px;
+			}
+			.dropDown {
+			    display: block;
+			    width: 36px;
+			    height: 30px;
+			    border-left: 1px solid #aaa;
+			    position: absolute;
+			    right: 0;
+			    top: 0px;
+			    background: #eee;
+			    cursor: pointer;
+			    i {
+			    	display: inline-block;
+				    width: 12px;
+				    height: 6px;
+				    background: url(../assets/images/window-icons.png) 0 -378px;
+				    position: relative;
+				    left: 13px;
+				    top: 6px;
+			    }
+			}
+			.folderList {
+				width:220px;
+				max-height:200px;
+				overflow:auto;
+				position:relative;
+				top:30px;
+				left:-1px;
+				border:1px solid #aaa;
+				background:#fff;
+				display:none;				
+				ul {
+					-webkit-padding-start: 0;
+					-moz-padding-start: 0;
+					padding-start: 0;
+					padding-left:0;
+				}
+				li {
+					line-height: 26px;
+					cursor: pointer;
+					position: relative;
+				}
+				li ul {
+					display: none;
+				}
+				>ul>li>ul {
+					display:block;
+				}
+				
+				.switch {
+					position:absolute;
+					display: inline-block;
+					width:10px;
+					height:10px;
+					background:#aaa;
+					margin-right:3px;
+					background-image: url('/assets/images/icons.png');
+					top:8px;
+					z-index: 10;
+				}
+				.switch.closed {
+					background-position: 0 -64px;
+				}
+				.switch.opened {
+					background-position: 0 -48px;
+				}
+				.switch.none {
+					background: none;
+				}
+				.folder {
+					display: inline-block;
+					width:15px;
+					height:12px;
+					background:url('/assets/images/window-icons.png') 0 -106px;
+					margin-right:3px;
+				}
+				a {
+					width:100%;
+					display: block;
+				}
+				a.on {
+					background: #d1f1fe;
+				}
+			}
+		}
+		.searchFile {
+			width:220px;
+			height:32px;
+			border:1px solid #aaa;
+			float:left;
+			margin-left:10px;
+			margin-top:36px;
+			background:#fff;
+			position:relative;
+			.txt {
+				width:190px;
+				height:30px;
+				border:none;
+				background:#fff;
+				text-indent:5px;
+				outline:none;
+			}
+			.button {
+				border:7px solid #fff;
+				width:28px;
+				height:28px;
+				background:url(../assets/images/window-icons.png) 0 -63px;
+				position:absolute;
+				top:1px;
+				right:0;
+			}
+		}
+		.fileList {
+			width:450px;
+			margin:19px auto;
+			height:248px;
+		}
+		.fileListInner {
+			width:450px;
+			max-height:248px;
+			border:1px solid #aaa;
+			overflow:auto;
+			h3 {
+				font-size:12px;
+				font-weight:bold;
+				height:31px;
+				line-height:30px;
+				background:#eee;
+				border-top:1px solid #aaa;
+				margin:0;padding:0;
+			}
+			h3.noborder {
+				border-top:none;
+			}
+			p {
+				height:31px;
+				line-height:30px;
+				border-top:1px solid #aaa;
+				margin:0;padding:0;
+				cursor:pointer;
+			}
+			p.on {
+				background:#D1F1FE;
+			}
+			.ico {
+				display:inline-block;
+				width:15px;
+				height:12px;
+				background-image:url(../assets/images/window-icons.png);
+				float:left;
+			}
+			.ico.folder {
+				background-position:0 -106px;
+				margin:9px 3px 0 3px;
+			}
+			.ico.file {
+				width:10px;
+				height:14px;
+				background-position:0 -119px;
+				margin:7px 6px 0 5px;
+			}
+			span {
+				display:inline-block;
+			}
+			span.period,span.filename {
+				width:310px;
+				text-overflow:ellipsis;
+				white-space:nowrap;
+				overflow:hidden;
+				float:left;
+				text-indent:10px;
+			}
+			.lists span.period,.lists span.filename {
+				text-indent:0;
+				width:280px;
+			}
+			span.date,span.time {
+				max-width:130px;
+			}
+			.lists span.time {
+				text-indent:10px;
+			}
+		}
+		.buttons {
+			margin-top:25px;
+		}
+	}
+}

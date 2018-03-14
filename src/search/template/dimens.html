@@ -1,0 +1,97 @@
+<div class="dimensionInner">
+	<div ng-show="dimensions.freqList" id="freq">
+		<dl>
+			<dt>频度筛选<i class="ico closed" ng-click="showList($event,'freq')"></i></dt>
+			<dd>
+				<ul>
+					<li ng-repeat="c in dimensions.freqList" title="{{c.name}}" ng-click="selectDimens(c.freqId,'freqId')">
+						<span class="labels" ng-class="{'selected':qic.freqId&&qic.freqId.indexOf(c.freqId)!=-1}"></span>{{c.name}}
+					</li>
+				</ul>
+				<div class="clear"></div>
+			</dd>
+		</dl>
+	</div>
+	<div ng-show="dimensions.orgList" id="org">
+		<dl>
+			<dt>年鉴筛选<i class="ico closed" ng-click="showList($event,'org')"></i></dt>
+			<dd>
+				<ul>
+					<li ng-repeat="c in dimensions.orgList" title="{{c.orgZh}}" ng-click="selectDimens(c.orgZh,'orgZh')">
+						<span class="labels" ng-class="{'selected':qic.orgZh&&qic.orgZh.indexOf(c.orgZh)!=-1}"></span>{{c.orgZh}}
+					</li>
+				</ul>
+				<div class="clear"></div>
+			</dd>
+		</dl>
+	</div>
+	<div ng-show="dimensions.regclcList" id="reg">
+		<dl>
+			<dt>区域筛选<i class="ico closed" ng-click="showList($event,'reg')"></i></dt>
+			<dd>
+				<ul>
+					<li ng-repeat="c in dimensions.regclcList" title="{{c.name}}" ng-click="selectDimens(c.regclc,'regclc')">
+						<span class="labels" ng-class="{'selected':qic.regclc&&qic.regclc.indexOf(c.regclc)!=-1}"></span>{{c.name}}
+					</li>
+				</ul>
+				<div class="clear"></div>
+			</dd>
+		</dl>
+	</div>
+
+	<div ng-show="dimensions.IndustryList" id="Industry">
+		<dl>
+			<dt>按国民经济行业分类<i class="ico closed" ng-click="showList($event,'Industry')"></i></dt>
+			<dd>
+				<ul>
+					<li ng-click="selectDimens(1,'isIndustry')" ng-class="{'selected':qic.isIndustry.indexOf(1)!=-1}">
+						<span class="labels" ng-class="{'selected':qic.isIndustry&&qic.isIndustry.indexOf(1)!=-1}"></span><span>是</span>
+					</li> 
+					<li ng-click="selectDimens(0,'isIndustry')" ng-class="{'selected':qic.isIndustry.indexOf(0)!=-1}">
+						<span class="labels" ng-class="{'selected':qic.isIndustry&&qic.isIndustry.indexOf(0)!=-1}"></span><span>否</span>
+					</li>
+				</ul>
+				<div class="clear"></div>
+			</dd>
+		</dl>
+	</div>
+	<div ng-show="dimensions.sourceList" id="source">
+		<dl>
+			<dt ng-click="showList($event, 'source',dimensions.sourceList.length)">来源筛选<i class="ico closed"></i></dt>
+			<dd>
+				<ul>
+					<li ng-repeat="c in dimensions.sourceList" title="{{c.sourceZh}}" ng-click="selectDimens(c.sourceZh,'sourceZh')">
+						<span class="labels" ng-class="{'selected':qic.source&&qic.source.indexOf(c.sourceZh)!=-1}"></span>{{c.sourceZh}}
+					</li>
+				</ul>
+				<div class="clear"></div>
+			</dd>
+		</dl>
+	</div>
+	<div ng-show="dimensions.typeList" id="type">
+		<dl>
+			<dt>分类筛选<i class="ico closed" ng-click="showList($event,'type')"></i></dt>
+			<dd>
+				<ul>
+					<li ng-repeat="c in dimensions.typeList" title="{{c.typeName}}" ng-click="selectDimens(c.typeName,'typeId')">
+						<span class="labels" ng-class="{'selected':qic.typeId&&qic.typeId.indexOf(c.typeName)!=-1}"></span>{{c.typeName}}
+					</li>
+				</ul>
+				<div class="clear"></div>
+			</dd>
+		</dl>
+	</div>
+	<div ng-show="dimensions.cubeList" id="cube">
+		<dl>
+			<dt ng-click="showList($event,'cube',dimensions.cubeList.length)">数据库筛选<i class="ico closed"></i></dt>
+			<dd>
+				<ul>
+					<li ng-repeat="c in dimensions.cubeList" title="{{c.cubeName}}" ng-click="selectDimens(c.cubeId,'cubeId')" ng-class="{'selected':qic.cubeId.indexOf(c.cubeId)!=-1}">
+						<span class="labels" ng-class="{'selected':qic.cubeId&&qic.cubeId.indexOf(c.cubeId)!=-1}"></span>{{c.cubeName}}
+					</li>
+				</ul>
+				<div class="clear"></div>
+			</dd>
+		</dl>
+	</div>
+</div>

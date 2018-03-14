@@ -1,0 +1,102 @@
+.downloadExcel {
+	width:444px;
+	margin-left:-222px;
+	.header {
+		cursor:move;
+		.title {
+			margin-left:8px;
+			.ico {
+				width:18px;
+				height:16px;
+				background-image:url('../assets/images/tool-chart-ico.png');
+				background-position:0 -55px;
+				position:relative;
+				top:3px;
+				margin-right:3px;
+			}
+		}
+	}
+	.body {
+		background:#fff;
+		.conditions {
+			margin:10px;
+			label {
+				font-weight:normal;
+				cursor:pointer;
+				.checkboxs {
+					display:inline-block;
+					width:13px;
+					height:13px;
+					border:1px solid #282828;
+					position:relative;
+					top:2px;
+					margin-right:3px;
+					.ico-del {
+						width:9px;
+						height:9px;
+						background:none;
+						position:absolute;
+						top:1px;
+						left:1px;
+					}
+				}
+				.checkboxs.selected {
+					.ico-del {
+						background:url('../assets/images/window-icons.png') 0 -386px;
+					}
+				}
+			}
+		}
+	}
+}
+.downloadPdf {
+	width:569px;
+	margin-left:-284px;
+	.header {
+		cursor:move;
+		.title {
+			margin-left:8px;
+			.ico {
+				width:18px;
+				height:16px;
+				background-image:url('../assets/images/tool-chart-ico.png');
+				background-position:0 -73px;
+				position:relative;
+				top:3px;
+				margin-right:3px;
+			}
+		}
+	}
+	.body {
+		background:#fff;
+		.conditions {
+			margin:10px;
+			label {
+				font-weight:normal;
+				cursor:pointer;
+				.checkboxs {
+					display:inline-block;
+					width:13px;
+					height:13px;
+					border:1px solid #282828;
+					position:relative;
+					top:2px;
+					margin-right:3px;
+					.ico-del {
+						width:9px;
+						height:9px;
+						background:none;
+						position:absolute;
+						top:1px;
+						left:1px;
+					}
+				}
+				.checkboxs.selected {
+					.ico-del {
+						background:url('../assets/images/window-icons.png') 0 -386px;
+					}
+				}
+			}
+		}
+	}
+}

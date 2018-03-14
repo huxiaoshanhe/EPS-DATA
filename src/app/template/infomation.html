@@ -1,0 +1,178 @@
+<div ng-controller="infomationCtrl as imc" ng-show="imc.show">
+	<div class="header">
+		<span class="title"><i class="ico"></i>{{imc.title}}</span>
+		<span class="ico ico-close" ng-click="imc.show = false;wb.showWindow = false"></span>
+	</div>
+	<div class="body">
+		<div class="content">
+			<div ng-show="imc.indicator">
+				<dl>
+					<dt>指标隶属关系：</dt>
+					<dd>{{imc.indicator.indicatorNameZh}}</dd>
+				</dl>
+				<div class="clear"></div>
+				<dl>
+					<dt>指标频度：</dt>
+					<dd ng-show="imc.indicator.freq_id==1">年度</dd>
+					<dd ng-show="imc.indicator.freq_id==3">季度</dd>
+					<dd ng-show="imc.indicator.freq_id==4">月度</dd>
+				</dl>
+				<div class="clear"></div>
+				<dl>
+					<dt>指标时间范围：</dt>
+					<dd>{{imc.indicator.timeLimit}}</dd>
+				</dl>
+				<div class="clear"></div>
+				<dl ng-show="imc.indicator.sourceZh">
+					<dt>数据来源：</dt>
+					<dd>{{imc.indicator.sourceZh}}</dd>
+				</dl>
+				<div class="clear"></div>
+				<dl ng-show="imc.indicator.desc_zh">
+					<dt>指标解释：</dt>
+					<dd>{{imc.indicator.desc_zh}}</dd>
+				</dl>
+				<div class="clear"></div>
+				<dl ng-show="imc.indicator.cube_name_zh">
+					<dt>所属数据库：</dt>
+					<dd>{{imc.indicator.cube_name_zh}}</dd>
+				</dl>
+				<div class="clear"></div>
+				<dl ng-show="imc.indicator.comment_zh">
+					<dt>指标批注：</dt>
+					<dd>{{imc.indicator.comment_zh}}</dd>
+				</dl>
+				<div class="clear"></div>
+			</div>
+			<div ng-show="imc.time">
+				<dl>
+					<dt>名称：</dt>
+					<dd>{{imc.time.time_name_zh}}</dd>
+				</dl>
+				<div class="clear"></div>
+				<dl ng-show="imc.time.descCh">
+					<dt>备注：</dt>
+					<dd>{{imc.time.descCh}}</dd>
+				</dl>
+				<div class="clear"></div>
+			</div>
+
+			<div ng-show="imc.region">
+				<dl>
+					<dt>名称：</dt>
+					<dd>{{imc.region.nameCh}}</dd>
+				</dl>
+				<div class="clear"></div>
+				<dl ng-show="imc.region.descCh">
+					<dt>备注：</dt>
+					<dd>{{imc.region.descCh}}</dd>
+				</dl>
+				<div class="clear"></div>
+			</div>
+
+			<div ng-show="imc.industry">
+				<dl>
+					<dt>名称：</dt>
+					<dd>{{imc.industry.nameCh}}</dd>
+				</dl>
+				<div class="clear"></div>
+				<dl ng-show="imc.industry.descCh">
+					<dt>备注：</dt>
+					<dd>{{imc.industry.descCh}}</dd>
+				</dl>
+				<div class="clear"></div>
+			</div>
+
+			<div ng-show="imc.classify">
+				<dl>
+					<dt>名称：</dt>
+					<dd>{{imc.classify.nameCh}}</dd>
+				</dl>
+				<div class="clear"></div>
+				<dl ng-show="imc.classify.descCh">
+					<dt>备注：</dt>
+					<dd>{{imc.classify.descCh}}</dd>
+				</dl>
+				<div class="clear"></div>
+			</div>
+
+			<div ng-show="imc.country">
+				<dl>
+					<dt>名称：</dt>
+					<dd>{{imc.country.nameCh}}</dd>
+				</dl>
+				<div class="clear"></div>
+				<dl ng-show="imc.country.descCh">
+					<dt>备注：</dt>
+					<dd>{{imc.country.descCh}}</dd>
+				</dl>
+				<div class="clear"></div>
+			</div>
+
+			<div ng-show="imc.commodity">
+				<dl>
+					<dt>名称：</dt>
+					<dd>{{imc.commodity.nameCh}}</dd>
+				</dl>
+				<div class="clear"></div>
+				<dl ng-show="imc.commodity.descCh">
+					<dt>备注：</dt>
+					<dd>{{imc.commodity.descCh}}</dd>
+				</dl>
+				<div class="clear"></div>
+			</div>
+
+			<div ng-show="imc.booth">
+				<dl>
+					<dt>名称：</dt>
+					<dd>{{imc.booth.nameCh}}</dd>
+				</dl>
+				<div class="clear"></div>
+				<dl ng-show="imc.booth.descCh">
+					<dt>备注：</dt>
+					<dd>{{imc.booth.descCh}}</dd>
+				</dl>
+				<div class="clear"></div>
+			</div>
+
+			<div ng-show="imc.entnature">
+				<dl>
+					<dt>名称：</dt>
+					<dd>{{imc.entnature.nameCh}}</dd>
+				</dl>
+				<div class="clear"></div>
+				<dl ng-show="imc.entnature.descCh">
+					<dt>备注：</dt>
+					<dd>{{imc.entnature.descCh}}</dd>
+				</dl>
+				<div class="clear"></div>
+			</div>
+
+			<div ng-show="imc.markey">
+				<dl>
+					<dt>名称：</dt>
+					<dd>{{imc.markey.nameCh}}</dd>
+				</dl>
+				<div class="clear"></div>
+				<dl ng-show="imc.markey.descCh">
+					<dt>备注：</dt>
+					<dd>{{imc.markey.descCh}}</dd>
+				</dl>
+				<div class="clear"></div>
+			</div>
+
+			<div ng-show="imc.sex">
+				<dl>
+					<dt>名称：</dt>
+					<dd>{{imc.sex.nameCh}}</dd>
+				</dl>
+				<div class="clear"></div>
+				<dl ng-show="imc.sex.descCh">
+					<dt>备注：</dt>
+					<dd>{{imc.sex.descCh}}</dd>
+				</dl>
+				<div class="clear"></div>
+			</div>
+		</div>
+	</div>
+</div>

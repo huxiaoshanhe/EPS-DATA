@@ -1,0 +1,56 @@
+<div ng-controller="collectionsCtrl as cc" ng-show="cc.show">
+	<div class="header">
+		<span class="title"><i class="ico"></i>收藏夹</span>
+		<span class="ico ico-close" ng-click="cc.show=false;wb.showWindow = false"></span>
+	</div>
+	<div class="body">
+		<div class="folderSelect" ng-click="cc.prevent($event)">
+			<i class="ico"></i>
+			<div class="currentFolder" ng-bind="cc.selectedFolder.collectionName"></div>
+			<span class="dropDown" ng-click="cc.showList=!cc.showList"><i></i></span>
+			<drop-folder-list class="folderList" list="cc.allFolders" show="cc.showList"></drop-folder-list>
+		</div>
+		<div class="searchFile">
+			<form ng-submit="cc.goSearch()">
+				<input type="text" class="txt" ng-model="cc.keywords" />
+				<input type="submit" class="button" value="" />
+			</form>
+		</div>
+		<div class="clear"></div>
+
+		<div class="fileList">
+			<div class="fileListInner">
+				<div ng-if="!cc.recFiles&&!cc.filesList&&!cc.searchList" style="line-height: 30px;text-align: center;">您还未收藏数据</div>
+				<div ng-if="cc.recFiles">
+					<div>
+						<h3 class="noborder"><span class="period">今日</span><span class="date">修改日期</span></h3>
+						<p ng-class="{'on':f.collectionCode==cc.selectedFile.collectionCode}" ng-repeat="f in cc.recFiles.today" ng-click="cc.selectFile(f)" ng-dblclick="cc.dblOpen(f)"><span class="filename" ng-bind="f.collectionName"></span><span class="time" ng-bind="f.lastModify.time | date:'yyyy-MM-dd HH:mm:ss'"></span></p>
+						<p ng-if="cc.recFiles.today.length==0"><span class="filename">无</span></p>
+					</div>
+					<div>
+						<h3><span class="period">最近30日</span></h3>
+						<p ng-class="{'on':f.collectionCode==cc.selectedFile.collectionCode}" ng-repeat="f in cc.recFiles.month" ng-click="cc.selectFile(f)" ng-dblclick="cc.dblOpen(f)"><span class="filename" ng-bind="f.collectionName"></span><span class="time" ng-bind="f.lastModify.time | date:'yyyy-MM-dd HH:mm:ss'"></span></p>
+						<p ng-if="cc.recFiles.month.length==0"><span class="filename">无</span></p>
+					</div>
+					<div>
+						<h3><span class="period">更早</span></h3>
+						<p ng-class="{'on':f.collectionCode==cc.selectedFile.collectionCode}" ng-repeat="f in cc.recFiles.other" ng-click="cc.selectFile(f)" ng-dblclick="cc.dblOpen(f)"><span class="filename" ng-bind="f.collectionName"></span><span class="time" ng-bind="f.lastModify.time | date:'yyyy-MM-dd HH:mm:ss'"></span></p>
+						<p ng-if="cc.recFiles.other.length==0"><span class="filename">无</span></p>
+					</div>
+				</div>
+				<div ng-if="cc.filesList">
+					<h3 class="noborder"><span class="period">名称</span><span class="date">修改日期</span></h3>
+					<p class="lists" ng-class="{'on':f.collectionCode==cc.selectedFile.collectionCode}" ng-repeat="f in cc.filesList|orderBy:'-isDirectory'" ng-click="cc.selectFile(f)" ng-dblclick="cc.dblOpen(f)"><i class="ico" ng-class="{'folder':f.isDirectory==true,'file':f.isDirectory==false}"></i><span class="filename" ng-bind="f.collectionName"></span><span class="time" ng-bind="f.lastModify"></span></p>
+				</div>
+				<div ng-if="cc.searchList">
+					<h3 class="noborder"><span class="period">名称</span><span class="date">修改日期</span></h3>
+					<p class="lists" ng-class="{'on':f.collectionCode==cc.selectedFile.collectionCode}" ng-repeat="f in cc.searchList|orderBy:'-isDirectory'" ng-click="cc.selectFile(f)" ng-dblclick="cc.dblOpen(f)"><i class="ico" ng-class="{'folder':f.isDirectory==true,'file':f.isDirectory==false}"></i><span class="filename" ng-bind="f.collectionName"></span><span class="time" ng-bind="f.lastModify"></span></p>
+				</div>				
+			</div>
+		</div>
+		<div class="buttons">
+			<span class="btn apply" ng-click="cc.goOpen()">打开</span>
+			<span class="btn cancel" ng-click="cc.show = false;wb.showWindow = false">取消</span>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,10 @@
+<div class="timeSearch">
+	<div class="latest" ng-click="selectTime(5,'最近5年')">最近5年</div>
+	<div class="latest" ng-click="selectTime(10,'最近10年')">最近10年</div>
+	<div class="latest" ng-click="selectTime(20,'最近20年')">最近20年</div>
+	<div class="latest">请输入起止年份</div>
+	<div class="timeDefined">
+		<input class="startTime" ng-model="startTime" maxlength="4" />-<input class="endTime" ng-model="endTime" maxlength="4" />
+		<a ng-click="selectTime2(startTime,endTime)">确定</a>
+	</div>
+</div>

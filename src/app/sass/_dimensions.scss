@@ -1,0 +1,221 @@
+.dimensions {
+	height:100%;
+	padding-left: 10px;
+	font-family:"Tahoma, Arial, Helvetica, sans-serif";
+	.rc-label {
+		font-weight:bold;
+		line-height:35px;
+		font-size:14px;
+	}
+	.dimensionConnect {
+		padding:5px 0;
+		width:180px;
+	}
+	.dimen-ls {
+		margin-bottom: 10px;
+		background:#fff;
+		.dimen-ls-control {
+			.dimen-name {
+				background:#fff;
+				line-height:24px;
+				text-indent:5px;
+				cursor:move;
+				position:relative;
+				.show-tree {
+					width:22px;
+					height:22px;
+					position:absolute;
+					right:0px;
+					top:0px;
+					cursor:pointer;
+					.ico-show-tree {
+						background:none;
+						position:relative;
+						left:-0px;
+						top:-2px;
+						width: 0;
+					    height: 0;
+					    border-left: 5px solid transparent;
+					    border-right: 5px solid transparent;
+					    border-top: 5px solid #aaa;
+					}
+				}
+				.show-tree:hover {
+					.ico-show-tree{
+						border-top: 5px solid #282828;
+					}
+				}
+			}
+			border:none;
+			padding:1px;
+			background: -webkit-linear-gradient(#9b969a, #cbccce); /* Safari 5.1 - 6.0 */
+  			background: -o-linear-gradient(#9b969a, #cbccce); /* Opera 11.1 - 12.0 */
+ 			background: -moz-linear-gradient(#9b969a, #cbccce); /* Firefox 3.6 - 15 */
+  			background: linear-gradient(#9b969a, #cbccce); /* 标准的语法 */
+			width:180px;
+			height:26px;
+			font-size:12px;
+			position: relative;
+			.childList {
+				position: absolute;
+				top:24px;
+				left:0px;
+				width:180px;
+				height:250px;
+				border:1px solid #aaa;
+				z-index: 200;
+				background: #fff;
+				display: none;
+				.searWrap {
+					z-index:215;
+					position:relative;
+					top:0px;
+					padding:5px 0;
+					background:#fff;
+					width:100%;
+					.sear {		
+						position:relative;				
+						width:auto;
+						height:20px;
+						border:1px solid #aaa;
+						margin:0 5px;
+						.txt{
+							border:none;
+							height:18px;
+							width:100%;
+							text-indent:5px;
+						}
+						.txt:focus {
+							outline:none;
+						}
+						.ico.btn {
+							width:14px;
+							height:14px;
+							background-position:0 -110px;
+							position:absolute;
+							right:2px;
+							top:2px;
+							cursor:pointer;
+						}
+						.ico.btn-time {
+							position:absolute;
+							background:none;
+							width: 0;
+						    height: 0;
+						    top:6px;
+						    right:4px;
+						    border-left: 5px solid transparent;
+						    border-right: 5px solid transparent;
+						    border-top: 5px solid #aaa;
+						}
+					}
+				}
+				
+				.timeSearch {
+					display:none;
+					width:168px;
+					max-height:200px;
+					background:#fff;
+					position:absolute;
+					left:5px;top:24px;
+					z-index:1000;
+					border:1px solid #aaa;
+					.latest{
+						font-size:12px;
+						line-height:20px;
+						padding:0 5px;
+						cursor:pointer;
+					} 
+					.latest:hover {
+						background:#dddddd;
+					}
+					.timeDefined {
+						padding:5px 0;
+						input:focus{
+							outline:none;
+						}
+						input {
+							width:35px;
+							height:20px;
+							font-size:12px;
+							text-align:center;
+							margin:0 5px;
+							border:1px solid #aaa;
+						}
+						a {
+							display:inline-block;
+							width:30px;
+							height:20px;
+							padding:0;
+							background:#0d8ccc;
+							line-height:18px;
+							text-align:center;
+							cursor:pointer;
+							color:#fff;
+							text-decoration:none;
+							font-size:12px;
+						}
+					}
+				}
+				.search-list {
+					display:none;
+					width:100%;
+					height:100%;
+					margin:0;
+					background:#fff;
+					position:absolute;
+					left:0;top:-0px;
+					padding:30px 0 0 0;
+					overflow:auto;
+					font-size:12px;
+					a {
+						cursor:pointer;
+						color:#282828;
+						text-decoration:none;
+					}
+					li {
+						white-space: nowrap;
+    					outline: 0;
+    					ul {
+    						padding-left:15px;
+    					}
+					}
+				}
+				.childList-inner {
+					width:100%;
+					height:100%;
+					overflow:auto;
+					position:relative;
+					top:-30px;
+					padding:30px 0 0 0;
+				}
+				li{
+					list-style:none;
+				}
+			}
+		}
+	}	
+	.goSync {
+		background:#0B8CCB;
+		color:#fff;
+		border:none;
+		display:block;
+		width:68px;
+		height:32px;
+		font-size:12px;
+		font-family:"Microsoft yahei";
+		border-radius:2px;
+	}
+	.goSync:hover {
+		background:#134F7B;
+	}
+}
+.ui-icon-gripsmall-diagonal-se {
+	z-index:216;
+	background-image:url(../assets/images/icons.png);
+	background-position:-19px -28px;
+	background-color:#fff;
+}
+.dimensions .map-dimens .dimen-ls .dimen-ls-control .dimen-name {
+	cursor:default;
+}

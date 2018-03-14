@@ -1,0 +1,94 @@
+<div ng-controller="hightLightCtrl as llc" ng-show="llc.show">
+	<div class="header">
+		<span class="title"><i class="ico"></i>高亮显示</span>
+		<span class="ico ico-close" ng-click="llc.show = false;wb.showWindow = false"></span>
+	</div>
+	<div class="body">		
+		<div class="conditions">
+			<span class="bold">条件：</span>
+			<div class="condtionShow">
+				<input type="text" ng-model="llc.selectedConditions.name" readonly="readonly" />
+				<i class="ico dropdown"></i>
+				<ul class="list">
+					<li ng-repeat="cl in llc.conditions" ng-click="llc.selectCondition(cl.value,cl.name)">{{cl.name}}</li>
+				</ul>
+			</div>
+			<div class="nums">
+				<div class="num-a">
+					<span>A:</span>
+					<input type="number" ng-disabled="llc.selectedConditions.value===0" ng-model="llc.numberA" />
+				</div>
+				<div class="num-b">
+					<span>B:</span>
+					<input type="number" ng-disabled="llc.selectedConditions.value!==7" ng-model="llc.numberB" />
+				</div>
+			</div>
+		</div>
+
+		<div class="stylesConditions">
+			<span class="bold">样式：</span>
+			<div class="styles">
+				<div class="bgcolor">
+					<span>单元格背景：</span>
+					<div class="colorSelect bgColors">
+						<div class="selectedColor" style="background: {{llc.selectedBgColor}}"></div>
+						<i class="ico dropdown"></i>
+						<div class="colors">
+							<div class="common-colors">
+								<span ng-repeat="c1 in llc.colors.commonUseColor" style="background: {{c1}}" ng-click="llc.selectedBgColor = c1"></span>
+							</div>
+							<div class="color-list">
+								<div class="unit" ng-repeat="cc in llc.colors.colorList">
+									<span ng-repeat="c2 in cc" style="background: {{c2}}" ng-click="llc.selectedBgColor = c2"></span>
+								</div>
+								<div class="clear"></div>
+							</div>
+							<div class="other-color">
+								<span ng-repeat="c3 in llc.colors.otherColor" style="background: {{c3}}" ng-click="llc.selectedBgColor = c3"></span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="bgcolor bgcolor2">
+					<span>字体颜色：</span>
+					<div class="colorSelect fontColors">
+						<div class="selectedColor" style="background: {{llc.selectedColor}}"></div>
+						<i class="ico dropdown"></i>
+						<div class="colors">
+							<div class="common-colors">
+								<span ng-repeat="c1 in llc.colors.commonUseColor" style="background: {{c1}}" ng-click="llc.selectedColor = c1"></span>
+							</div>
+							<div class="color-list">
+								<div class="unit" ng-repeat="cc in llc.colors.colorList">
+									<span ng-repeat="c2 in cc" style="background: {{c2}}" ng-click="llc.selectedColor = c2"></span>
+								</div>
+								<div class="clear"></div>
+							</div>
+							<div class="other-color">
+								<span ng-repeat="c3 in llc.colors.otherColor" style="background: {{c3}}" ng-click="llc.selectedColor = c3"></span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="fontSize">
+					<span>字体大小：</span>
+					<input type="number" ng-model="llc.selectedFontSize" />
+				</div>
+				<div class="clear"></div>
+			</div>
+		</div>
+		
+		<div class="fontStyles">
+			<a ng-repeat="fs in llc.fontStyles" ng-click="llc.selectStyles(fs.id)"><span class="checkboxs" ng-class="{'selected':llc.selectedStyles.indexOf(fs.id)!==-1}"><i class="ico ico-sel"></i></span><span ng-style="fs.style">{{fs.name}}</span></a>
+			<!-- <a ng-click="llc.selectStyles('fontWeight')"><span class="checkboxs" ng-class="{'selected':llc.fontWeight=='bold'}"><i class="ico ico-sel"></i></span><span style="font-weight: bold;">加粗</span></a>
+			<a ng-click="llc.selectStyles('fontStyle')"><span class="checkboxs" ng-class="{'selected':llc.fontStyle=='italic'}"><i class="ico ico-sel"></i></span><span style="font-style: italic;">斜体</span></a>
+			<a ng-click="llc.selectStyles('textDecoration')"><span class="checkboxs" ng-class="{'selected':llc.textDecoration=='underline'}"><i class="ico ico-sel"></i></span><span style="text-decoration: underline;">下划线</span></a> -->
+		</div>
+		
+		<div class="buttons">
+			<span class="btn apply" ng-click="llc.goApply()">应用</span>
+			<span class="btn del" ng-click="llc.clear()">清除</span>
+			<span class="btn cancel" ng-click="llc.show=false;wb.showWindow = false">取消</span>
+		</div>
+	</div>
+</div>

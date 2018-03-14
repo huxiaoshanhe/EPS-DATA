@@ -1,0 +1,31 @@
+<div class="window newFolderWin" ng-show="sfc.showAddWin">
+	<div class="header">
+		<span class="title"><i class="ico"></i>新建文件夹</span>
+		<span class="ico ico-close" ng-click="sfc.showAddWin=false"></span>
+	</div>
+	<div class="body">
+		<div class="list-item">
+			<div class="labels">名称</div>
+			<div class="inputs">
+				<input type="text" ng-model="sfc.newFolderName" style="text-indent: 10px;" maxlength="50" />
+			</div>
+			<div class="clear"></div>
+		</div>
+		<div class="list-item">
+			<div class="labels">位置</div>
+			<div class="inputs" ng-click="sfc.prevent($event)">
+				<i class="ico"></i>
+				<input type="text" ng-model="sfc.needAddFolder.collectionName" readonly="readonly" />
+				<span class="dropDown" ng-click="sfc.showAddSelect=!sfc.showAddSelect"><i></i></span>
+				<add-folder-list class="folder-list" addlist="sfc.folderList" show="sfc.showAddSelect"></add-folder-list>
+			</div>
+			<div class="clear"></div>
+		</div>
+
+		<div class="buttons">
+			<span class="btn apply" ng-click="sfc.goAddFolder()">确定</span>
+			<span class="btn cancel" ng-click="sfc.showAddWin=false">取消</span>
+			<div class="clear"></div>
+		</div>
+	</div>
+</div>

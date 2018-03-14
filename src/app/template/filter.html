@@ -1,0 +1,42 @@
+<div ng-controller="filterCtrl as fc" ng-show="fc.show">
+	<div class="header">
+		<span class="title"><i class="ico"></i>数据筛选设置</span>
+		<span class="ico ico-close" ng-click="fc.show = false;wb.showWindow = false"></span>
+	</div>
+	<div class="body">
+		<div class="filterConditions">
+			<div ng-repeat="c in fc.conditions">
+			<label ng-click="fc.selectConditons(c.name)"><span class="checkboxs" ng-class="{'selected':fc.selectedConditions.indexOf(c.name)!==-1}"><i class="ico ico-del"></i></span>{{c.title}}</label>
+			</div>
+		</div>
+
+		<div class="otherConditions">
+			<div class="bolder">满足隐藏条件的整行整列</div>
+			<div class="selectConditons">
+				<div class="selectedConditon">{{fc.otherSelected.name}}</div>
+				<i class="ico ico-dropdown"></i>
+				<ul class="list">
+					<li ng-repeat="oc in fc.otherConditions" ng-click="fc.selectOtherCondition(oc.value,oc.name)">{{oc.name}}</li>
+				</ul>
+			</div>
+
+			<div class="nums">
+				<div class="num-a">
+					<span>A:</span>
+					<input type="number" ng-disabled="fc.otherSelected.value===0" ng-model="fc.numberA" />
+				</div>
+				<div class="num-b">
+					<span>B:</span>
+					<input type="number" ng-disabled="fc.otherSelected.value!=='bt'&&fc.otherSelected.value!=='nbt'" ng-model="fc.numberB" />
+				</div>
+			</div>
+
+		</div>
+		
+		<div class="buttons">
+			<span class="btn apply" ng-click="fc.goApply()">应用</span>
+			<span class="btn del" ng-click="fc.goClear()">清除</span>
+			<span class="btn cancel" ng-click="fc.show = false;wb.showWindow = false">取消</span>
+		</div>
+	</div>
+</div>

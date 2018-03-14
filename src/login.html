@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ch">
+<head>
+  <meta charset="UTF-8">
+  <title>代理登陆</title>
+  <script src="../bower_components/jquery/dist/jquery.js"></script>
+  <script src="../bower_components/jquery-cookie/jquery.cookie.js"></script>
+  <script type="text/javascript">
+    $(function() {
+      $('#submit').submit(function() {
+        var data = {
+          loginName:'ll',
+          password:'wugang1982',
+          loginType:'pwd',
+          verifyCode:$('input[name="verifyCode"]').val()
+        }
+        $.ajax({
+          url:'http://localhost:5323/platform/user/login',
+          type:'post',
+          data:data,
+          success:function(response) {
+            /*$.cookie('clientName',response.userInfoBO.clientName,{path:'/',domain:'test.dfinder.cn'});
+            $.cookie('sid','52C8BCBCC9F0A8E67016157CFC16AF3B',{path:'/',domain:'test.dfinder.cn'});*/
+          }
+        });
+        return false;
+      });
+    });
+  </script>
+</head>
+<body>
+  <form action="http://127.0.0.1:5323/platform/user/login" method="post" style="margin: auto;width:200px;" id="submit">
+    <table>
+      <tbody>
+        <tr><td><img style="display:inline-block;width:100%;" src="http://127.0.0.1:5323/platform/code.do" onclick="this.src='http://127.0.0.1:5323/platform/code.do?tamp=' + new Date().getTime();"></td></tr>
+        <tr><td><input type="text" name="loginName" value="admin" id="test"></td></tr>
+        <tr><td><input type="password" name="password" value="111111"><input type="hidden" name="loginType" value="pwd"></td></tr>
+        <tr><td><input type="text" name="verifyCode" value=""></td></tr>
+        <tr><td><button style="display:inline-block;width:100%;">登陆</button></td></tr>
+      </tbody>
+    </table>
+  </form>
+</body>
+</html>

@@ -1,0 +1,41 @@
+.growthRate {
+	width:444px;
+	margin-left:-222px;
+	.header {
+		cursor:move;
+		.title {
+			margin-left:8px;
+			.ico {
+				width:18px;
+				height:16px;
+				background-image:url('../assets/images/tool-chart-ico.png');
+				background-position:0 -242px;
+				position:relative;
+				top:3px;
+				margin-right:3px;
+			}
+		}
+	}
+	.body {
+		background:#fff;
+		.conditions {
+			margin:10px;
+			label {
+				font-weight:normal;
+				cursor:pointer;
+				.checkboxs {
+					display:inline-block;
+					width:10px;
+					height:10px;
+					background:url(../assets/images/icons.png) -22px 0;
+					position:relative;
+					top:4px;
+					margin-right:3px;
+				}
+				.checkboxs.selected {
+					background:url(../assets/images/icons.png) -22px -15px;
+				}
+			}
+		}
+	}
+}

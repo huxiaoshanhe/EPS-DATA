@@ -1,0 +1,334 @@
+.loginWin {
+	width:475px;
+	height:296px;
+	margin-left:-237px;
+	.header {
+		cursor:move;
+		.title {
+			margin-left:9px;
+		}
+	}
+
+	.body {
+		height:260px;
+		width:475px;
+		background:#fff;
+		padding:16px 0 0 0;
+		.list-item {
+			width:288px;
+			height:32px;
+			border:1px solid #aaa;
+			margin:20px auto 0 auto;
+			position:relative;
+			.labels {
+				position:absolute;
+				width:50px;
+				height:16px;
+				line-height:16px;
+				border-right:1px solid #aaa;
+				top:8px;
+				left:0;
+				text-indent:10px;
+				color:#aaa;
+			}
+			input {
+				position:absolute;
+				top:0;
+				left:50px;
+				width:236px;
+				height:30px;
+				border:none;
+				outline:none;
+				text-indent:10px;
+			}
+		}
+		.errorTip {
+		 	height:30px;
+		 	line-height:30px;
+		 	width:284px;
+		 	margin:10px auto 0 auto;
+		 	color:#f00;
+		}
+		.errorTip.success {
+			color:#00960A;
+		}
+		button {
+			width:284px;
+			height:32px;
+			display:block;
+			margin:10px auto 0 auto;
+			border:none;
+			background:#0c8ccb;
+			color:#fff;
+			border-radius:2px;
+		}
+		.others {
+			width:280px;
+			margin:0 auto;
+			line-height:32px;
+			color:#aaa;
+			a {
+				color:#0c8ccb;
+			}
+			.f-right{
+				float:right;
+			}
+		}
+	}
+}
+.registerWin {
+	width:475px;
+	height:296px;
+	margin-left:-237px;
+	.header {
+		cursor:move;
+		.title {
+			margin-left:9px;
+		}
+	}
+	.body {
+		height:514px;
+		width:475px;
+		background:#fff;
+		padding:16px 0 0 0;
+		.list-item {
+			width:288px;
+			height:32px;
+			border:1px solid #aaa;
+			margin:20px auto 0 auto;
+			position:relative;
+			.labels {
+				position:absolute;
+				width:80px;
+				height:16px;
+				line-height:16px;
+				border-right:1px solid #aaa;
+				top:8px;
+				left:0;
+				color:#aaa;
+				text-indent:5px;
+				.red {
+					color:#f00;
+					width:14px;
+					display:inline-block;
+					text-align:center;
+				}
+				.split {
+					display:inline-block;
+					text-align:center;
+					width:21px;
+					padding-right:3px;
+				}
+			}
+			input {
+				position:absolute;
+				top:0;
+				left:80px;
+				width:206px;
+				height:30px;
+				border:none;
+				outline:none;
+				text-indent:10px;
+			}
+			input.short {
+				width:107px;
+				border-right:1px solid #aaa;
+			}
+			a.button {
+				width:99px;
+				background:#0c8ccb;
+				height:30px;
+				border:none;
+				color:#fff;
+				cursor:pointer;
+				position:absolute;
+				top:0;
+				left:187px;
+				text-indent:0;
+				line-height:30px;
+				text-align:center;
+			}
+			a.button.disabled {
+				background:#aaa;
+			}
+		}
+		.errorTip {
+		 	height:30px;
+		 	line-height:30px;
+		 	width:284px;
+		 	margin:10px auto 0 auto;
+		 	color:#f00;
+		}
+		.errorTip.success {
+			color:#00960A;
+		}
+		.agreement {
+			width:284px;
+			margin:0 auto 0 auto;
+			height:26px;
+			line-height:26px;
+			a {
+				color:#0c8ccb;
+				padding:0;
+				line-height:26px;
+				margin:0;
+			}
+			cursor:pointer;
+			padding:0;
+		}
+		.checkbox {
+			width:10px;
+			height:10px;
+			display:inline-block;
+			margin-right:2px;
+			margin-top:0;
+			position:relative;
+			background:url(../assets/images/icons.png) -22px 0;
+		}
+		.checkbox.on {
+			background:url(../assets/images/icons.png) -22px -15px;
+		}
+		button {
+			width:284px;
+			height:32px;
+			display:block;
+			margin:0 auto 0 auto;
+			border:none;
+			background:#0c8ccb;
+			color:#fff;
+			border-radius:2px;
+		}
+		.others {
+			width:280px;
+			margin:0 auto;
+			line-height:32px;
+			color:#aaa;
+			a {
+				color:#0c8ccb;
+			}
+		}
+		.statement {
+			width:284px;
+			margin:0 auto;
+			text-align:center;
+			line-height:50px;
+			color:#ff2001;
+		}
+	}
+}
+
+.findPwd {
+	width:475px;
+	height:296px;
+	margin-left:-237px;
+	.header {
+		cursor:move;
+		.title {
+			margin-left:9px;
+		}
+	}
+
+	.body {
+		height:354px;
+		width:475px;
+		background:#fff;
+		padding:16px 0 0 0;
+		.list-item {
+			width:288px;
+			height:32px;
+			border:1px solid #aaa;
+			margin:20px auto 0 auto;
+			position:relative;
+			.labels {
+				position:absolute;
+				width:80px;
+				height:16px;
+				line-height:16px;
+				border-right:1px solid #aaa;
+				top:8px;
+				left:0;
+				color:#aaa;
+				text-indent:5px;
+				.red {
+					color:#f00;
+					width:14px;
+					display:inline-block;
+					text-align:center;
+				}
+				.split {
+					display:inline-block;
+					text-align:center;
+					width:21px;
+					padding-right:3px;
+				}
+			}
+			input {
+				position:absolute;
+				top:0;
+				left:80px;
+				width:206px;
+				height:30px;
+				border:none;
+				outline:none;
+				text-indent:10px;
+			}
+			input.short {
+				width:107px;
+				border-right:1px solid #aaa;
+			}
+			a.button {
+				width:99px;
+				background:#0c8ccb;
+				height:30px;
+				border:none;
+				color:#fff;
+				cursor:pointer;
+				position:absolute;
+				top:0;
+				left:187px;
+				text-indent:0;
+				line-height:30px;
+				text-align:center;
+			}
+			a.button.disabled {
+				background:#aaa;
+			}
+		}
+		.errorTip {
+		 	height:30px;
+		 	line-height:30px;
+		 	width:284px;
+		 	margin:10px auto 0 auto;
+		 	color:#f00;
+		}
+		.errorTip.success {
+			color:#00960A;
+		}
+		button {
+			width:284px;
+			height:32px;
+			display:block;
+			margin:10px auto 0 auto;
+			border:none;
+			background:#0c8ccb;
+			color:#fff;
+			border-radius:2px;
+		}
+		.others {
+			width:280px;
+			margin:0 auto;
+			line-height:32px;
+			color:#aaa;
+			a {
+				color:#0c8ccb;
+			}
+		}
+		.statement {
+			width:284px;
+			margin:0 auto;
+			text-align:center;
+			line-height:50px;
+			color:#ff2001;
+		}
+	}
+}

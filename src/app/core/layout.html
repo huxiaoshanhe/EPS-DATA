@@ -1,0 +1,67 @@
+<div id="plat-main"  loading="loading" ng-style="wb.mainStyle.platformStyle">
+	<div id="top" ng-style="wb.mainStyle.topStyle">
+		<div class="top-head" ng-style="wb.mainStyle.topHeadStyle">
+			<div class="logo">
+				<a href="/index.html"><img src="assets/images/logo.png" /></a>
+			</div>
+			<div class="search">
+				<form ng-submit="wb.goSearch()">
+					<input type="text" class="txt" ng-model="wb.keywords" />
+					<input type="button" class="btn" value="搜索" ng-click="wb.goSearch()" />
+				</form>
+			</div>
+		</div>
+		<div class="top-message">
+			<div class="welcome">
+				你好，<span ng-bind="userName"></span>，欢迎使用EPS数据平台！
+			</div>
+			<div class="notice" ng-show="news!==''">
+				<div class="notice-label"><i class="ico ico-notice"></i>官方公告：</div>
+				<div class="notice-title"><marquee behavior="scroll" onmouseover="this.stop();" onmouseout="this.start();"><a ng-href="{{activeUrl}}" target="_blank">{{news}}</a></marquee></div>
+			</div>
+			<div class="other-nav">
+				<span ng-show="userNickname"><a href="collections.html" target="_blank">{{userNickname}}</a>|</span>
+				<span ng-show="wb.topCutFlag"><a ng-click="wb.topCut(!wb.topCutFlag)"><i class="ico ico-sear"></i>搜索</a>|</span><a ng-click="wb.changeLanguage()">English</a>|<a ng-click="wb.showHelp()"><i class="ico ico-help"></i>帮助中心</a>|<a href="javascript:;" ng-click="wb.logout()"><i class="ico ico-home"></i>返回首页</a>|<a href="http://oldolap.epsnet.com.cn/default.aspx" target="_blank">旧版入口</a>
+			</div>
+			<div class="topCut" ng-click="wb.topCut(!wb.topCutFlag)"><span class="inner" ng-style="wb.mainStyle.topCutStyle"></span></div>
+		</div>
+	</div>
+	<div id="cubes" ng-style="wb.mainStyle.cubesStyle">
+		<div class="cubesInnerWrap">
+			<div class="ico ico-cube-switch" ng-click="wb.switchs('cube')" ng-style="wb.mainStyle.switchStyle" ng-class="{'rotate':!wb.showCubes}"></div>
+			<div class="cubeList" ng-show="wb.showCubes">数据库</div>
+			<cubes class="cubesInner" ng-show="wb.showCubes"></cubes>
+		</div>
+	</div>
+	<div id="dimension" ng-style="wb.mainStyle.dimensionsStyle">
+		<div class="ico ico-dimen-switch" ng-click="wb.switchs('dimen')" ng-style="wb.mainStyle.switchStyle" ng-class="{'rotate':!wb.showDimensions}"></div>
+		<dimensions class="dimensions" ng-show="wb.showDimensions"></dimensions>
+	</div>
+	<div id="platform">
+		<div class="platform-inner">
+			<coolmenu data="wb.menuData" ng-style="wb.mainStyle.menuStyle"></coolmenu>
+			<div class="tableArea" ng-show="wb.showTable" ng-style="wb.mainStyle.tableStyle">
+				<tool class="tableTool" data="wb.menuData[0]" ctrl="wb.tabelCtrl"></tool>
+				<div class="sheetTitle" ng-show="sheetName"><span ng-bind="sheetName"></span></div>
+				<div class="sheet" ng-controller="SheetCtrl as sc" style="height:100%;padding-left: 20px;">
+					<handsontable data="sc.sheet" class="hansontable" size="tableSize"></handsontable>
+				</div>
+				<div ng-show="!sheetName" style="height:10px;"></div>
+			</div>
+			<div class="chartArea" ng-show="wb.showChart" o ng-style="wb.mainStyle.chartStyle" ng-controller="chartsCtrl as chc">
+				<chart-resize class="chartResize"></chart-resize>
+				<tool class="chartTool" data="wb.menuData[2]"></tool>
+				<chart size="chartSize"></chart>
+			</div>
+			<div class="mapArea" ng-show="wb.showMap" ng-style="wb.mainStyle.mapStyle">
+				<tool class="mapTool" data="wb.menuData[3]"></tool>
+				<div ng-include="'app/template/map.html'" class="map" ng-controller="mapCtrl as mapc"></div>	
+			</div>
+			<div class="cubeName"><span style="float:right; border-bottom: none;height:26px;line-height: 26px;background: none;" ng-bind="currentIP"></span><span>{{cubeName}}</span></div>
+		</div>
+	</div>
+	<div ng-include="'app/template/window.html'"></div>
+	<div ng-include="'app/template/analysis/main.html'"></div>
+	<error-msg class="window errorMsg"></error-msg>	
+	<help-center class="helpCenter" ng-show="wb.showHelpCenter"></help-center>
+</div>
